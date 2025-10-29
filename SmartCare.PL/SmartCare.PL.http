@@ -1,0 +1,6 @@
+@SmartCare.PL_HostAddress = http://localhost:5288
+
+GET {{SmartCare.PL_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
