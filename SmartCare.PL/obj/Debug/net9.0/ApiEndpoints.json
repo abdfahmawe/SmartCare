@@ -1,0 +1,157 @@
+[
+  {
+    "ContainingType": "SmartCare.PL.Areas.Identity.Controllers.AccountController",
+    "Method": "ChangePassword",
+    "RelativePath": "api/Identity/Account/ChangePassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "changePassword",
+        "Type": "SmartCare.DAL.DTO.Requists.ChangePassword",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SmartCare.PL.Areas.Identity.Controllers.AccountController",
+    "Method": "ConfirmEmail",
+    "RelativePath": "api/Identity/Account/ConfirmEmail",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "token",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SmartCare.PL.Areas.Identity.Controllers.AccountController",
+    "Method": "Login",
+    "RelativePath": "api/Identity/Account/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginRequest",
+        "Type": "SmartCare.DAL.DTO.Requists.LoginRequist",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SmartCare.DAL.DTO.Responses.UserResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SmartCare.PL.Areas.Identity.Controllers.AccountController",
+    "Method": "Register",
+    "RelativePath": "api/Identity/Account/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registerRequest",
+        "Type": "SmartCare.DAL.DTO.Requists.RegisterRequist",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SmartCare.DAL.DTO.Responses.UserResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SmartCare.PL.Areas.Identity.Controllers.AccountController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/Identity/Account/ResetPassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "resetPassword",
+        "Type": "SmartCare.DAL.DTO.Requists.ResetPassword",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SmartCare.PL.Areas.Paitent.Controllers.PatientController",
+    "Method": "Profile",
+    "RelativePath": "api/Patient/Patient/Profile",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "SmartCare.DAL.DTO.Responses.PatientProfileResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
