@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace SmartCare.DAL.Models
 {
-   public class MedicalRecord : BaseModel
+   public class MedicalRecord 
     {
+        public string Id { get; set; } = Guid.NewGuid().ToString();
         public string Diagnosis { get; set; }          // التشخيص
         public string Symptoms { get; set; }           // الأعراض
         public string Notes { get; set; }              // ملاحظات الدكتور

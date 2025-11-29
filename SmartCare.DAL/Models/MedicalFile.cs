@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace SmartCare.DAL.Models
 {
-   public class MedicalFile : BaseModel
+   public class MedicalFile 
     {
+        public string Id { get; set; } = Guid.NewGuid().ToString();
         public string FileUrl { get; set; }
         public string FileType { get; set; }      // image/jpeg - application/pdf
         public string Description { get; set; }

@@ -22,21 +22,14 @@ namespace SmartCare.DAL.Models
         O_Positive,
         O_Negative
     }
-    public class Patient : BaseModel
+    public class Patient  : ApplicationUser
     {
-      
-        public string PhoneNumber { get; set; }
+
         public string EmergencyPhone { get; set; }
-        public int Age { get; set; }
+        public DateTime BirthDate { get; set; }
         public Gendar Gendar { get; set; }
-        public string Email { get; set; }
         public string Address { get; set; }
         public BloodType BloodType { get; set; }
-
-        // ربط مع Identity user
-        public string UserId { get; set; }               // <-- NEW
-        public ApplicationUser User { get; set; }        // <-- NEW (navigation)
-
         // relationships
         public ICollection<Appointment> Appointments { get; set; }
     }

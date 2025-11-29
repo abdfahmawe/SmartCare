@@ -16,8 +16,9 @@ namespace SmartCare.DAL.Models
         Pending,
         Approved
     }
-    public class Invoice : BaseModel
+    public class Invoice 
     {
+        public string Id { get; set; } = Guid.NewGuid().ToString();
         public decimal Amount { get; set; }
         public DateTime IssuedAt { get; set; } = DateTime.Now;
         public bool IsPaid { get; set; }

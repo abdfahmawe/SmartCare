@@ -20,7 +20,7 @@ namespace SmartCare.DAL.Repositries.Classes
         }
         public async Task<Patient> GetPaitentByIdAsync(string UserId)
         {
-            var patient = await _dbContext.Patients.Include(p => p.User).FirstOrDefaultAsync(i=> i.UserId == UserId);
+            var patient = await _dbContext.Patients.FirstOrDefaultAsync(i => i.Id == UserId);
             return patient;
         }
     }

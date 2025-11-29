@@ -31,28 +31,36 @@ namespace SmartCare.DAL.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            // علاقة ال invoice
-            modelBuilder.Entity<Appointment>()
-                .HasOne(a => a.Invoice)
-                .WithOne(i => i.Appointment)
-                .HasForeignKey<Invoice>(i => i.AppointmentId);
-            // علاقة ال medical record
-            modelBuilder.Entity<Appointment>()
-                .HasOne(a => a.MedicalRecord)
-                .WithOne(m => m.Appointment)
-                .HasForeignKey<MedicalRecord>(m => m.AppointmentId);
-            modelBuilder.Entity<Patient>()
-              .HasOne(p => p.User)
-                .WithMany()
-                    .HasForeignKey(p => p.UserId)
-                .OnDelete(DeleteBehavior.Restrict);
 
-            modelBuilder.Entity<Doctor>()
-                .HasOne(d => d.User)
-                .WithMany()
-                .HasForeignKey(d => d.UserId)
-                .OnDelete(DeleteBehavior.Restrict);
+            modelBuilder.Entity<Appointment>()
+.HasOne(a => a.Patient)
+.WithMany(p => p.Appointments)
+.HasForeignKey(a => a.PatientId)
+.OnDelete(DeleteBehavior.Restrict);
 
+            modelBuilder.Entity<Appointment>()
+            .HasOne(a => a.Doctor)
+            .WithMany(d => d.Appointments)
+            .HasForeignKey(a => a.DoctorId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Appointment>()
+            .HasOne(a => a.Invoice)
+            .WithOne(i => i.Appointment)
+            .HasForeignKey<Invoice>(i => i.AppointmentId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Appointment>()
+            .HasOne(a => a.MedicalRecord)
+            .WithOne(m => m.Appointment)
+            .HasForeignKey<MedicalRecord>(m => m.AppointmentId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<WorkingTime>()
+            .HasOne(w => w.Doctor)
+            .WithMany(d => d.WorkingTimes)
+            .HasForeignKey(w => w.DoctorId)
+            .OnDelete(DeleteBehavior.Cascade);
 
             //identity configurations
             modelBuilder.Entity<ApplicationUser>().ToTable("Users");

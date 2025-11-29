@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+//[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("SmartCare.PL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bbfe3a323c13d14bff49681d84bca61d5f37cb58")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+baee2a13cee4d9e9e4064c0ed69ee360e0adf67b")]
 [assembly: System.Reflection.AssemblyProductAttribute("SmartCare.PL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SmartCare.PL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

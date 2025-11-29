@@ -13,8 +13,9 @@ namespace SmartCare.DAL.Models
         Canceled,
         NoShow
     }
-    public class Appointment : BaseModel
+    public class Appointment 
     {
+        public string Id { get; set; } = Guid.NewGuid().ToString();
         public AppointmentStatus Status { get; set; } 
         public DateTime StartAt { get; set; }
         public DateTime EndAt { get; set; }
@@ -24,7 +25,9 @@ namespace SmartCare.DAL.Models
         public Patient Patient { get; set; }
         public string DoctorId { get; set; }
         public Doctor Doctor { get; set; }
+        public string InvoiceId { get; set; }
         public Invoice Invoice { get; set; }
+        public string MedicalRecordId { get; set; }
         public MedicalRecord MedicalRecord { get; set; }
         public ICollection<Prescription> Prescriptions { get; set; }
         public ICollection<MedicalFile> MedicalFiles { get; set; }

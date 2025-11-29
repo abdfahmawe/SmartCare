@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace SmartCare.DAL.Models
 {
-  public  class Prescription : BaseModel
+  public  class Prescription 
     {
+        public string Id { get; set; } = Guid.NewGuid().ToString();
         public string MedicineName { get; set; }     // اسم الدواء
         public string Dosage { get; set; }           // الجرعة
         public string Frequency { get; set; }        // عدد المرات يوميًا

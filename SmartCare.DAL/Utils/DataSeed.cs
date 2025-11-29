@@ -61,14 +61,13 @@ namespace SmartCare.DAL.Utils
 
             var doctor = new Doctor
             {
-                Id = Guid.NewGuid().ToString(),
-                Email = doctorUser.Email,
-                PhoneNumber = "0568837223",
-                EmergencyPhone = "0599111111",
+                Id = doctorUser.Id,
                 City = "Ramallah",
                 Specialization = "Cardiologist",
+                PhoneNumber = "0568837223",
+                EmergencyPhone = "0599111111",
                 DepartmentId = department.Id,
-                UserId = doctorUser.Id
+               
             };
 
             await _context.Doctors.AddAsync(doctor);
@@ -99,16 +98,13 @@ namespace SmartCare.DAL.Utils
 
             var patient = new Patient
             {
-                Id = Guid.NewGuid().ToString(),
+                Id = patientUser.Id,
                 PhoneNumber = "0599555522",
                 EmergencyPhone = "0599112233",
-                Age = 24,
-                Gendar = Gendar.Boy,
-                Email = patientUser.Email,
                 Address = "Nablus",
+                Gendar = Gendar.Boy,
+                BirthDate = new DateTime(2004,1,1),
                 BloodType = BloodType.A_Positive ,
-                
-                UserId = patientUser.Id   // <-- now exists
             };
 
             await _context.Patients.AddAsync(patient);

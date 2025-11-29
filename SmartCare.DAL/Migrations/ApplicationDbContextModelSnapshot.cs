@@ -79,6 +79,11 @@ namespace SmartCare.DAL.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasMaxLength(21)
+                        .HasColumnType("nvarchar(21)");
+
                     b.Property<string>("Email")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
@@ -143,6 +148,10 @@ namespace SmartCare.DAL.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("Users", (string)null);
+
+                    b.HasDiscriminator().HasValue("ApplicationUser");
+
+                    b.UseTphMappingStrategy();
                 });
 
             modelBuilder.Entity("SmartCare.DAL.Models.Appointment", b =>
@@ -159,6 +168,14 @@ namespace SmartCare.DAL.Migrations
 
                     b.Property<DateTime>("EndAt")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("InvoiceId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MedicalRecordId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PatientId")
                         .IsRequired()
@@ -195,48 +212,6 @@ namespace SmartCare.DAL.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Departments");
-                });
-
-            modelBuilder.Entity("SmartCare.DAL.Models.Doctor", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("City")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("DepartmentId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("EmergencyPhone")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PhoneNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Specialization")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("DepartmentId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Doctors");
                 });
 
             modelBuilder.Entity("SmartCare.DAL.Models.Invoice", b =>
@@ -343,47 +318,6 @@ namespace SmartCare.DAL.Migrations
                     b.ToTable("MedicalRecords");
                 });
 
-            modelBuilder.Entity("SmartCare.DAL.Models.Patient", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("Address")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Age")
-                        .HasColumnType("int");
-
-                    b.Property<int>("BloodType")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("EmergencyPhone")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Gendar")
-                        .HasColumnType("int");
-
-                    b.Property<string>("PhoneNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Patients");
-                });
-
             modelBuilder.Entity("SmartCare.DAL.Models.Prescription", b =>
                 {
                     b.Property<string>("Id")
@@ -444,6 +378,61 @@ namespace SmartCare.DAL.Migrations
                     b.ToTable("WorkingTimes");
                 });
 
+            modelBuilder.Entity("SmartCare.DAL.Models.Doctor", b =>
+                {
+                    b.HasBaseType("SmartCare.DAL.Models.ApplicationUser");
+
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DepartmentId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("EmergencyPhone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Specialization")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasIndex("DepartmentId");
+
+                    b.HasDiscriminator().HasValue("Doctor");
+                });
+
+            modelBuilder.Entity("SmartCare.DAL.Models.Patient", b =>
+                {
+                    b.HasBaseType("SmartCare.DAL.Models.ApplicationUser");
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("BirthDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("BloodType")
+                        .HasColumnType("int");
+
+                    b.Property<string>("EmergencyPhone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Gendar")
+                        .HasColumnType("int");
+
+                    b.ToTable("Users", t =>
+                        {
+                            t.Property("EmergencyPhone")
+                                .HasColumnName("Patient_EmergencyPhone");
+                        });
+
+                    b.HasDiscriminator().HasValue("Patient");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -464,13 +453,13 @@ namespace SmartCare.DAL.Migrations
                     b.HasOne("SmartCare.DAL.Models.Doctor", "Doctor")
                         .WithMany("Appointments")
                         .HasForeignKey("DoctorId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("SmartCare.DAL.Models.Patient", "Patient")
                         .WithMany("Appointments")
                         .HasForeignKey("PatientId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Doctor");
@@ -478,31 +467,12 @@ namespace SmartCare.DAL.Migrations
                     b.Navigation("Patient");
                 });
 
-            modelBuilder.Entity("SmartCare.DAL.Models.Doctor", b =>
-                {
-                    b.HasOne("SmartCare.DAL.Models.Department", "Department")
-                        .WithMany("Doctors")
-                        .HasForeignKey("DepartmentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("SmartCare.DAL.Models.ApplicationUser", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Department");
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("SmartCare.DAL.Models.Invoice", b =>
                 {
                     b.HasOne("SmartCare.DAL.Models.Appointment", "Appointment")
                         .WithOne("Invoice")
                         .HasForeignKey("SmartCare.DAL.Models.Invoice", "AppointmentId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Appointment");
@@ -524,21 +494,10 @@ namespace SmartCare.DAL.Migrations
                     b.HasOne("SmartCare.DAL.Models.Appointment", "Appointment")
                         .WithOne("MedicalRecord")
                         .HasForeignKey("SmartCare.DAL.Models.MedicalRecord", "AppointmentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Appointment");
-                });
-
-            modelBuilder.Entity("SmartCare.DAL.Models.Patient", b =>
-                {
-                    b.HasOne("SmartCare.DAL.Models.ApplicationUser", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.Navigation("User");
+                    b.Navigation("Appointment");
                 });
 
             modelBuilder.Entity("SmartCare.DAL.Models.Prescription", b =>
@@ -561,6 +520,17 @@ namespace SmartCare.DAL.Migrations
                         .IsRequired();
 
                     b.Navigation("Doctor");
+                });
+
+            modelBuilder.Entity("SmartCare.DAL.Models.Doctor", b =>
+                {
+                    b.HasOne("SmartCare.DAL.Models.Department", "Department")
+                        .WithMany("Doctors")
+                        .HasForeignKey("DepartmentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Department");
                 });
 
             modelBuilder.Entity("SmartCare.DAL.Models.Appointment", b =>

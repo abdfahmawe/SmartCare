@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.dal\\repositries\\interfaces\\ipatientrepositry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|solutionrelative:smartcare.dal\\repositries\\interfaces\\ipatientrepositry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.dal\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|solutionrelative:smartcare.dal\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB1A0FB-6F88-4C25-96B6-75E1D7628E28}|SmartCare.PL\\SmartCare.PL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.pl\\areas\\paitent\\controllers\\paitentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FB1A0FB-6F88-4C25-96B6-75E1D7628E28}|SmartCare.PL\\SmartCare.PL.csproj|solutionrelative:smartcare.pl\\areas\\paitent\\controllers\\paitentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.dal\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|solutionrelative:smartcare.dal\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{44A6F172-DAEE-4335-AA01-7C8ADD5BE78B}|SmartCare.BLL\\SmartCare.BLL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.bll\\services\\classes\\patientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{44A6F172-DAEE-4335-AA01-7C8ADD5BE78B}|SmartCare.BLL\\SmartCare.BLL.csproj|solutionrelative:smartcare.bll\\services\\classes\\patientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.dal\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|solutionrelative:smartcare.dal\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.dal\\repositries\\classes\\patientrepositry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|solutionrelative:smartcare.dal\\repositries\\classes\\patientrepositry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.dal\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|solutionrelative:smartcare.dal\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.dal\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|solutionrelative:smartcare.dal\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.dal\\utils\\dataseed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,17 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{7FB1A0FB-6F88-4C25-96B6-75E1D7628E28}|SmartCare.PL\\SmartCare.PL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7FB1A0FB-6F88-4C25-96B6-75E1D7628E28}|SmartCare.PL\\SmartCare.PL.csproj|solutionrelative:smartcare.pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44A6F172-DAEE-4335-AA01-7C8ADD5BE78B}|SmartCare.BLL\\SmartCare.BLL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.bll\\services\\interfaces\\ipatientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{44A6F172-DAEE-4335-AA01-7C8ADD5BE78B}|SmartCare.BLL\\SmartCare.BLL.csproj|solutionrelative:smartcare.bll\\services\\interfaces\\ipatientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/./SmartCare/True/SqlTable/dbo.Patients.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.dal\\dto\\responses\\patientprofileresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|solutionrelative:smartcare.dal\\dto\\responses\\patientprofileresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -45,118 +38,95 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "dbo.Patients [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/./SmartCare/True/SqlTable/dbo.Patients.sql",
-              "ToolTip": "dbo.Patients [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-11-28T22:46:33.206Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PatientService.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.BLL\\Services\\Classes\\PatientService.cs",
-              "RelativeDocumentMoniker": "SmartCare.BLL\\Services\\Classes\\PatientService.cs",
-              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.BLL\\Services\\Classes\\PatientService.cs",
-              "RelativeToolTip": "SmartCare.BLL\\Services\\Classes\\PatientService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-28T22:38:50.188Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IPatientService.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.BLL\\Services\\Interfaces\\IPatientService.cs",
-              "RelativeDocumentMoniker": "SmartCare.BLL\\Services\\Interfaces\\IPatientService.cs",
-              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.BLL\\Services\\Interfaces\\IPatientService.cs",
-              "RelativeToolTip": "SmartCare.BLL\\Services\\Interfaces\\IPatientService.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAADwvw4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-28T22:38:03.09Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PatientRepositry.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\Repositries\\Classes\\PatientRepositry.cs",
-              "RelativeDocumentMoniker": "SmartCare.DAL\\Repositries\\Classes\\PatientRepositry.cs",
-              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\Repositries\\Classes\\PatientRepositry.cs",
-              "RelativeToolTip": "SmartCare.DAL\\Repositries\\Classes\\PatientRepositry.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-28T22:34:22.656Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "IPatientRepositry.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\Repositries\\Interfaces\\IPatientRepositry.cs",
-              "RelativeDocumentMoniker": "SmartCare.DAL\\Repositries\\Interfaces\\IPatientRepositry.cs",
-              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\Repositries\\Interfaces\\IPatientRepositry.cs",
-              "RelativeToolTip": "SmartCare.DAL\\Repositries\\Interfaces\\IPatientRepositry.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Title": "Appointment.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\Models\\Appointment.cs",
+              "RelativeDocumentMoniker": "SmartCare.DAL\\Models\\Appointment.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\Models\\Appointment.cs",
+              "RelativeToolTip": "SmartCare.DAL\\Models\\Appointment.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAgwBoAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-28T22:33:13.101Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "PatientProfileResponse.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\DTO\\Responses\\PatientProfileResponse.cs",
-              "RelativeDocumentMoniker": "SmartCare.DAL\\DTO\\Responses\\PatientProfileResponse.cs",
-              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\DTO\\Responses\\PatientProfileResponse.cs",
-              "RelativeToolTip": "SmartCare.DAL\\DTO\\Responses\\PatientProfileResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-28T22:29:38.932Z",
+              "WhenOpened": "2025-11-29T21:26:18.638Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "PaitentController.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.PL\\Areas\\Paitent\\Controllers\\PaitentController.cs",
-              "RelativeDocumentMoniker": "SmartCare.PL\\Areas\\Paitent\\Controllers\\PaitentController.cs",
-              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.PL\\Areas\\Paitent\\Controllers\\PaitentController.cs",
-              "RelativeToolTip": "SmartCare.PL\\Areas\\Paitent\\Controllers\\PaitentController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAcAAAAAAAAAA==",
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "SmartCare.DAL\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "SmartCare.DAL\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAwwE4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-28T22:02:00.136Z",
+              "WhenOpened": "2025-11-29T21:12:24.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "SmartCare.DAL\\Models\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "SmartCare.DAL\\Models\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T20:47:00.979Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Patient.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\Models\\Patient.cs",
+              "RelativeDocumentMoniker": "SmartCare.DAL\\Models\\Patient.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\Models\\Patient.cs",
+              "RelativeToolTip": "SmartCare.DAL\\Models\\Patient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T20:38:06.477Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "Doctor.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\Models\\Doctor.cs",
+              "RelativeDocumentMoniker": "SmartCare.DAL\\Models\\Doctor.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\Models\\Doctor.cs",
+              "RelativeToolTip": "SmartCare.DAL\\Models\\Doctor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T20:37:16.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "DataSeed.cs",
               "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\Utils\\DataSeed.cs",
               "RelativeDocumentMoniker": "SmartCare.DAL\\Utils\\DataSeed.cs",
               "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\Utils\\DataSeed.cs",
               "RelativeToolTip": "SmartCare.DAL\\Utils\\DataSeed.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAawGMAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAMkAAAAAAAAAAAAwwOkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-24T19:49:22.665Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.PL\\Program.cs",
               "RelativeDocumentMoniker": "SmartCare.PL\\Program.cs",
               "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.PL\\Program.cs",
               "RelativeToolTip": "SmartCare.PL\\Program.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAACIAAABKAAAAAAAAAA==",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAwwF0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-24T20:02:18.844Z",
               "EditorCaption": ""
