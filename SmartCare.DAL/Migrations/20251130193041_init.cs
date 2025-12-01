@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace SmartCare.DAL.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -48,6 +48,16 @@ namespace SmartCare.DAL.Migrations
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ResetPassword = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ResetPasswordExpiry = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Discriminator = table.Column<string>(type: "nvarchar(21)", maxLength: 21, nullable: false),
+                    Specialization = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    City = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    EmergencyPhone = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DepartmentId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    Patient_EmergencyPhone = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BirthDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Gendar = table.Column<int>(type: "int", nullable: true),
+                    Address = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BloodType = table.Column<int>(type: "int", nullable: true),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -66,58 +76,40 @@ namespace SmartCare.DAL.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Users", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Doctors",
-                columns: table => new
-                {
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Specialization = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    City = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    EmergencyPhone = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    DepartmentId = table.Column<string>(type: "nvarchar(450)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Doctors", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Doctors_Departments_DepartmentId",
+                        name: "FK_Users_Departments_DepartmentId",
                         column: x => x.DepartmentId,
                         principalTable: "Departments",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Doctors_Users_UserId",
-                        column: x => x.UserId,
-                        principalTable: "Users",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Patients",
+                name: "Appointments",
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    EmergencyPhone = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Age = table.Column<int>(type: "int", nullable: false),
-                    Gendar = table.Column<int>(type: "int", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    BloodType = table.Column<int>(type: "int", nullable: false),
-                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    Status = table.Column<int>(type: "int", nullable: false),
+                    StartAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    EndAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DurationMinutes = table.Column<int>(type: "int", nullable: false),
+                    PatientId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    DoctorId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    InvoiceId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    MedicalRecordId = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Patients", x => x.Id);
+                    table.PrimaryKey("PK_Appointments", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Patients_Users_UserId",
-                        column: x => x.UserId,
+                        name: "FK_Appointments_Users_DoctorId",
+                        column: x => x.DoctorId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Appointments_Users_PatientId",
+                        column: x => x.PatientId,
                         principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
@@ -161,38 +153,9 @@ namespace SmartCare.DAL.Migrations
                 {
                     table.PrimaryKey("PK_WorkingTimes", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_WorkingTimes_Doctors_DoctorId",
+                        name: "FK_WorkingTimes_Users_DoctorId",
                         column: x => x.DoctorId,
-                        principalTable: "Doctors",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Appointments",
-                columns: table => new
-                {
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Status = table.Column<int>(type: "int", nullable: false),
-                    StartAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    EndAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    DurationMinutes = table.Column<int>(type: "int", nullable: false),
-                    PatientId = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    DoctorId = table.Column<string>(type: "nvarchar(450)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Appointments", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Appointments_Doctors_DoctorId",
-                        column: x => x.DoctorId,
-                        principalTable: "Doctors",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Appointments_Patients_PatientId",
-                        column: x => x.PatientId,
-                        principalTable: "Patients",
+                        principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -217,7 +180,7 @@ namespace SmartCare.DAL.Migrations
                         column: x => x.AppointmentId,
                         principalTable: "Appointments",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -263,7 +226,7 @@ namespace SmartCare.DAL.Migrations
                         column: x => x.AppointmentId,
                         principalTable: "Appointments",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -300,16 +263,6 @@ namespace SmartCare.DAL.Migrations
                 column: "PatientId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Doctors_DepartmentId",
-                table: "Doctors",
-                column: "DepartmentId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Doctors_UserId",
-                table: "Doctors",
-                column: "UserId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Invoices_AppointmentId",
                 table: "Invoices",
                 column: "AppointmentId",
@@ -325,11 +278,6 @@ namespace SmartCare.DAL.Migrations
                 table: "MedicalRecords",
                 column: "AppointmentId",
                 unique: true);
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Patients_UserId",
-                table: "Patients",
-                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Prescriptions_AppointmentId",
@@ -352,6 +300,11 @@ namespace SmartCare.DAL.Migrations
                 name: "EmailIndex",
                 table: "Users",
                 column: "NormalizedEmail");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Users_DepartmentId",
+                table: "Users",
+                column: "DepartmentId");
 
             migrationBuilder.CreateIndex(
                 name: "UserNameIndex",
@@ -394,16 +347,10 @@ namespace SmartCare.DAL.Migrations
                 name: "Roles");
 
             migrationBuilder.DropTable(
-                name: "Doctors");
-
-            migrationBuilder.DropTable(
-                name: "Patients");
+                name: "Users");
 
             migrationBuilder.DropTable(
                 name: "Departments");
-
-            migrationBuilder.DropTable(
-                name: "Users");
         }
     }
 }

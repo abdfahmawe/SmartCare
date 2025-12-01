@@ -5,7 +5,7 @@
 namespace SmartCare.DAL.Migrations
 {
     /// <inheritdoc />
-    public partial class FixCascadess : Migration
+    public partial class confirmUSers : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

@@ -12,8 +12,8 @@ using SmartCare.DAL.Data;
 namespace SmartCare.DAL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20251129213327_inittttt")]
-    partial class inittttt
+    [Migration("20251130204017_invoiceProblem")]
+    partial class invoiceProblem
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -173,7 +173,6 @@ namespace SmartCare.DAL.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("InvoiceId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("MedicalRecordId")
@@ -538,8 +537,7 @@ namespace SmartCare.DAL.Migrations
 
             modelBuilder.Entity("SmartCare.DAL.Models.Appointment", b =>
                 {
-                    b.Navigation("Invoice")
-                        .IsRequired();
+                    b.Navigation("Invoice");
 
                     b.Navigation("MedicalFiles");
 

@@ -136,6 +136,66 @@
   },
   {
     "ContainingType": "SmartCare.PL.Areas.Paitent.Controllers.PatientController",
+    "Method": "GetAppointments",
+    "RelativePath": "api/Patient/Patient/Appointments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SmartCare.DAL.DTO.Responses.PatientAppointmentResponse, SmartCare.DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SmartCare.PL.Areas.Paitent.Controllers.PatientController",
+    "Method": "GetMedicalRecords",
+    "RelativePath": "api/Patient/Patient/MedicalRecords",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SmartCare.DAL.Models.MedicalRecord, SmartCare.DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SmartCare.PL.Areas.Paitent.Controllers.PatientController",
+    "Method": "GetPrescriptions",
+    "RelativePath": "api/Patient/Patient/Prescriptions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SmartCare.DAL.DTO.Responses.PatientPresciptionResponse, SmartCare.DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SmartCare.PL.Areas.Paitent.Controllers.PatientController",
     "Method": "Profile",
     "RelativePath": "api/Patient/Patient/Profile",
     "HttpMethod": "GET",
@@ -145,6 +205,32 @@
     "ReturnTypes": [
       {
         "Type": "SmartCare.DAL.DTO.Responses.PatientProfileResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SmartCare.PL.Areas.Paitent.Controllers.PatientController",
+    "Method": "UpdateProfile",
+    "RelativePath": "api/Patient/Patient/UpdateProfile",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "SmartCare.DAL.DTO.Requists.UpdatePatientRequist",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SmartCare.DAL.Models.Patient",
         "MediaTypes": [
           "text/plain",
           "application/json",

@@ -170,11 +170,9 @@ namespace SmartCare.DAL.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("InvoiceId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("MedicalRecordId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PatientId")
@@ -535,13 +533,11 @@ namespace SmartCare.DAL.Migrations
 
             modelBuilder.Entity("SmartCare.DAL.Models.Appointment", b =>
                 {
-                    b.Navigation("Invoice")
-                        .IsRequired();
+                    b.Navigation("Invoice");
 
                     b.Navigation("MedicalFiles");
 
-                    b.Navigation("MedicalRecord")
-                        .IsRequired();
+                    b.Navigation("MedicalRecord");
 
                     b.Navigation("Prescriptions");
                 });

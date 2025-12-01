@@ -5,6 +5,7 @@ using SmartCare.DAL.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -56,21 +57,25 @@ namespace SmartCare.DAL.Utils
         {
             if (await _context.Doctors.AnyAsync()) return;
 
-            var doctorUser = await _userManager.FindByNameAsync("drmajdi");
+            
             var department = await _context.Departments.FirstAsync();
 
             var doctor = new Doctor
             {
-                Id = doctorUser.Id,
                 City = "Ramallah",
                 Specialization = "Cardiologist",
                 PhoneNumber = "0568837223",
                 EmergencyPhone = "0599111111",
+                Email = "LaethNueirat@gmail.com",
                 DepartmentId = department.Id,
-               
+                FullName = "Laeth Nueirat" ,
+                EmailConfirmed = true ,
+                UserName = "Laeth",
+              
             };
-
-            await _context.Doctors.AddAsync(doctor);
+            await _userManager.CreateAsync(doctor, "Pass@1212");
+            await _userManager.AddToRoleAsync(doctor, "Doctor");
+            _context.Doctors.Add(doctor);
             await _context.SaveChangesAsync();
 
             // Working Time
@@ -94,20 +99,24 @@ namespace SmartCare.DAL.Utils
         {
             if (await _context.Patients.AnyAsync()) return;
 
-            var patientUser = await _userManager.FindByEmailAsync("baraajetawi@gmail.com");
+            
 
             var patient = new Patient
             {
-                Id = patientUser.Id,
+                FullName = "Tareq Shreem" ,
+                Email = "TareqShreem@gmail.com",
+                UserName = "tareq",
                 PhoneNumber = "0599555522",
                 EmergencyPhone = "0599112233",
                 Address = "Nablus",
                 Gendar = Gendar.Boy,
                 BirthDate = new DateTime(2004,1,1),
                 BloodType = BloodType.A_Positive ,
+                EmailConfirmed = true ,
             };
-
-            await _context.Patients.AddAsync(patient);
+            await _userManager.CreateAsync(patient, "Pass@1212");
+            await _userManager.AddToRoleAsync(patient, "Patient");
+            _context.Patients.Add(patient);
             await _context.SaveChangesAsync();
         }
 

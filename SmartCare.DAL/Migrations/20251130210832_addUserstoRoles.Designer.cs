@@ -12,8 +12,8 @@ using SmartCare.DAL.Data;
 namespace SmartCare.DAL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20251129211556_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20251130210832_addUserstoRoles")]
+    partial class addUserstoRoles
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -171,6 +171,12 @@ namespace SmartCare.DAL.Migrations
 
                     b.Property<DateTime>("EndAt")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("InvoiceId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MedicalRecordId")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PatientId")
                         .IsRequired()
@@ -448,13 +454,13 @@ namespace SmartCare.DAL.Migrations
                     b.HasOne("SmartCare.DAL.Models.Doctor", "Doctor")
                         .WithMany("Appointments")
                         .HasForeignKey("DoctorId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("SmartCare.DAL.Models.Patient", "Patient")
                         .WithMany("Appointments")
                         .HasForeignKey("PatientId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Doctor");
@@ -467,7 +473,7 @@ namespace SmartCare.DAL.Migrations
                     b.HasOne("SmartCare.DAL.Models.Appointment", "Appointment")
                         .WithOne("Invoice")
                         .HasForeignKey("SmartCare.DAL.Models.Invoice", "AppointmentId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Appointment");
@@ -489,7 +495,7 @@ namespace SmartCare.DAL.Migrations
                     b.HasOne("SmartCare.DAL.Models.Appointment", "Appointment")
                         .WithOne("MedicalRecord")
                         .HasForeignKey("SmartCare.DAL.Models.MedicalRecord", "AppointmentId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Appointment");
@@ -530,13 +536,11 @@ namespace SmartCare.DAL.Migrations
 
             modelBuilder.Entity("SmartCare.DAL.Models.Appointment", b =>
                 {
-                    b.Navigation("Invoice")
-                        .IsRequired();
+                    b.Navigation("Invoice");
 
                     b.Navigation("MedicalFiles");
 
-                    b.Navigation("MedicalRecord")
-                        .IsRequired();
+                    b.Navigation("MedicalRecord");
 
                     b.Navigation("Prescriptions");
                 });

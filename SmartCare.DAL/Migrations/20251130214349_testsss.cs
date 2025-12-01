@@ -5,7 +5,7 @@
 namespace SmartCare.DAL.Migrations
 {
     /// <inheritdoc />
-    public partial class FixFKs : Migration
+    public partial class testsss : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
