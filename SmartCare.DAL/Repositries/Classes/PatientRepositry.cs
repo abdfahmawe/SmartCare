@@ -33,14 +33,7 @@ namespace SmartCare.DAL.Repositries.Classes
             var records = await _dbContext.MedicalRecords.Where(i=>i.Appointment.PatientId == UserId).ToListAsync();
             return records;
         }
-        public Task<List<Appointment>> GetAppointmentsAsync(string UserId)
-        {
-            var appointments = _dbContext.Appointments.Where(a=> a.PatientId == UserId)
-                .Include(a => a.Doctor)
-                .Include(a => a.MedicalRecord)
-                .ToListAsync();
-            return appointments;
-        }
+     
         
         public async Task<List<Prescription>> GetPrescriptions(string UserId)
         {

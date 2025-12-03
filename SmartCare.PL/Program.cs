@@ -33,6 +33,10 @@ namespace SmartCare.PL
             builder.Services.AddScoped<IDataSeed, DataSeed>();
             builder.Services.AddScoped<IPatientService, PatientService>();
             builder.Services.AddScoped<IPatientRepositry, PatientRepositry>();
+            builder.Services.AddScoped<IPatientAppointmentService, PatientAppointmentService>();
+            builder.Services.AddScoped<IPatientAppointmentRepositry, PatientAppointmentRepositry>();
+            builder.Services.AddScoped<IDoctorService, DoctorService>();
+            builder.Services.AddScoped<IDoctorRepositry, DoctorRepositry>();
 
             builder.Services.AddScoped<IAuthenticationUser , AuthenticationUser>();
             builder.Services.AddScoped<IEmailSender,EmailSetting>();

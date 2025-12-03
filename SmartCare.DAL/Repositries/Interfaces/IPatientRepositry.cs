@@ -12,7 +12,6 @@ namespace SmartCare.DAL.Repositries.Interfaces
         Task<Patient> GetPaitentByIdAsync(string UserId);
         Task UpdatePatientAsync(Patient patient);
         Task<List<MedicalRecord>> GetMedicalRecordsByIdAsync(string UserId);
-        Task<List<Appointment>> GetAppointmentsAsync(string UserId);
         Task<List<Prescription>> GetPrescriptions(string UserId);
     }
 }

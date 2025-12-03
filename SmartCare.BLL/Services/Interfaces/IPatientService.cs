@@ -15,7 +15,6 @@ namespace SmartCare.BLL.Services.Interfaces
         Task<Patient> UpdateProfileAsync(string UserId, UpdatePatientRequist dto);
       
         Task<List<MedicalRecord>> GetMedicalRecordsAsync(string UserId);
-        Task<List<PatientAppointmentResponse>> GetAppointmentsAsync(string UserId);
         Task<List<PatientPresciptionResponse>> GetPrescriptionsAsync(string UserId);
     }
 }

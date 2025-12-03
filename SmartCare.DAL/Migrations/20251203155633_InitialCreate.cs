@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace SmartCare.DAL.Migrations
 {
     /// <inheritdoc />
-    public partial class init : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -95,8 +95,8 @@ namespace SmartCare.DAL.Migrations
                     DurationMinutes = table.Column<int>(type: "int", nullable: false),
                     PatientId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     DoctorId = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    InvoiceId = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    MedicalRecordId = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    InvoiceId = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    MedicalRecordId = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {

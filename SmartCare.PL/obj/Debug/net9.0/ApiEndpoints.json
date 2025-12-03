@@ -1,5 +1,71 @@
 [
   {
+    "ContainingType": "SmartCare.PL.Areas.Doctor.Controllers.DoctorsController",
+    "Method": "GetWorkingHours",
+    "RelativePath": "api/Doctor/Doctors/GetWorkingHours",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SmartCare.DAL.DTO.Responses.WorkingTimeResponse, SmartCare.DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SmartCare.PL.Areas.Doctor.Controllers.DoctorsController",
+    "Method": "GetProfile",
+    "RelativePath": "api/Doctor/Doctors/Profile",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "SmartCare.DAL.DTO.Responses.DoctorProfileResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SmartCare.PL.Areas.Doctor.Controllers.DoctorsController",
+    "Method": "UpdateProfile",
+    "RelativePath": "api/Doctor/Doctors/UpdateProfile",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requist",
+        "Type": "SmartCare.DAL.DTO.Requists.UpdateDoctorRequist",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "SmartCare.PL.Areas.Identity.Controllers.AccountController",
     "Method": "ChangePassword",
     "RelativePath": "api/Identity/Account/ChangePassword",
@@ -136,26 +202,6 @@
   },
   {
     "ContainingType": "SmartCare.PL.Areas.Paitent.Controllers.PatientController",
-    "Method": "GetAppointments",
-    "RelativePath": "api/Patient/Patient/Appointments",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.List\u00601[[SmartCare.DAL.DTO.Responses.PatientAppointmentResponse, SmartCare.DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "SmartCare.PL.Areas.Paitent.Controllers.PatientController",
     "Method": "GetMedicalRecords",
     "RelativePath": "api/Patient/Patient/MedicalRecords",
     "HttpMethod": "GET",
@@ -231,6 +277,26 @@
     "ReturnTypes": [
       {
         "Type": "SmartCare.DAL.Models.Patient",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SmartCare.PL.Areas.Paitent.Controllers.PatientAppointmentsController",
+    "Method": "GetAppointments",
+    "RelativePath": "api/Patient/PatientAppointments/Appointments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SmartCare.DAL.DTO.Responses.PatientAppointmentResponse, SmartCare.DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

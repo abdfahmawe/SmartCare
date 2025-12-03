@@ -44,24 +44,7 @@ namespace SmartCare.BLL.Services.Classes
             var records = await _patientRepositry.GetMedicalRecordsByIdAsync(UserId);
             return records;
         }
-        public async Task<List<PatientAppointmentResponse>> GetAppointmentsAsync(string UserId)
-        {
-            var records = await _patientRepositry.GetAppointmentsAsync(UserId);
-            var recordsAfterAdapt = new List<PatientAppointmentResponse>();
-            foreach (var appointment in records)
-            {
-                recordsAfterAdapt.Add(new PatientAppointmentResponse()
-                {
-                    DurationMinutes = appointment.DurationMinutes,
-                    StartAt = appointment.StartAt,
-                    EndAt = appointment.EndAt,
-                    Status = appointment.Status,
-                    Id = appointment.Id,
-                    DoctorName = appointment.Doctor.FullName,
-                });
-            }
-            return recordsAfterAdapt;
-        }
+      
         public async Task<List<PatientPresciptionResponse>> GetPrescriptionsAsync(string UserId)
         {
             var prescriptions = await _patientRepositry.GetPrescriptions(UserId);

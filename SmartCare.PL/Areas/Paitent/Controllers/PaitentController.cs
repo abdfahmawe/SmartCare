@@ -42,13 +42,7 @@ namespace SmartCare.PL.Areas.Paitent.Controllers
             var medicalRecords = await _pateintService.GetMedicalRecordsAsync(userId);
             return Ok(medicalRecords);
         }
-        [HttpGet("Appointments")]
-        public async Task<ActionResult<List<PatientAppointmentResponse>>> GetAppointments()
-        {
-            var userId = User.FindFirst(ClaimTypes.NameIdentifier)!.Value;
-            var medicalRecords = await _pateintService.GetAppointmentsAsync(userId);
-            return Ok(medicalRecords);
-        }
+       
         [HttpGet("Prescriptions")]
         public async Task<List<PatientPresciptionResponse>> GetPrescriptions()
         {
