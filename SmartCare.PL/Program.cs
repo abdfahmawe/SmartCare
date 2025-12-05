@@ -37,6 +37,8 @@ namespace SmartCare.PL
             builder.Services.AddScoped<IPatientAppointmentRepositry, PatientAppointmentRepositry>();
             builder.Services.AddScoped<IDoctorService, DoctorService>();
             builder.Services.AddScoped<IDoctorRepositry, DoctorRepositry>();
+            builder.Services.AddScoped<IDoctorWorkingTimeService, DoctorWorkingTimeService>();
+            builder.Services.AddScoped<IDoctorWorkingTimeRepositry, DoctorWorkingTimeRepositry>();
 
             builder.Services.AddScoped<IAuthenticationUser , AuthenticationUser>();
             builder.Services.AddScoped<IEmailSender,EmailSetting>();

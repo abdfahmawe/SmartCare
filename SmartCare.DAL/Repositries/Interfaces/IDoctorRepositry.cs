@@ -12,6 +12,6 @@ namespace SmartCare.DAL.Repositries.Interfaces
     {
         Task<Doctor> GetProfileAsync(string doctorId);
         Task<string> UpdateDoctorAsync(Doctor doctor);
-        Task<List<WorkingTime>> GetWorkingTimeAsync(string doctorId);
+        
     }
 }

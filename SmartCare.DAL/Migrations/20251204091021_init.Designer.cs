@@ -12,8 +12,8 @@ using SmartCare.DAL.Data;
 namespace SmartCare.DAL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20251203155633_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20251204091021_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

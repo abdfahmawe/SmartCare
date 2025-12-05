@@ -64,7 +64,7 @@ namespace SmartCare.DAL.Utils
             {
                 City = "Ramallah",
                 Specialization = "Cardiologist",
-                PhoneNumber = "0568837223",
+                PhoneNumber = "0599111111",
                 EmergencyPhone = "0599111111",
                 Email = "LaethNueirat@gmail.com",
                 DepartmentId = department.Id,
@@ -73,10 +73,26 @@ namespace SmartCare.DAL.Utils
                 UserName = "Laeth",
               
             };
+            var doctor2 = new Doctor()
+            {
+                FullName = "Dr. Majdi Yakoub",
+                UserName = "drmajdi",
+                Email = "majdiyakoub@gmail.com",
+                EmailConfirmed = true,
+                City = "Ramallah",
+                Specialization = "Cardiologist",
+                PhoneNumber = "0568837223",
+                DepartmentId = department.Id,
+                EmergencyPhone = "0599111111",
+            };
             await _userManager.CreateAsync(doctor, "Pass@1212");
+            await _userManager.CreateAsync(doctor2, "Pass@1212");
+
             await _userManager.AddToRoleAsync(doctor, "Doctor");
-            _context.Doctors.Add(doctor);
-            await _context.SaveChangesAsync();
+            await _userManager.AddToRoleAsync(doctor2, "Doctor");
+
+            // _context.Doctors.Add(doctor);
+            // await _context.SaveChangesAsync();
 
             // Working Time
             foreach (DayOfWeek d in Enum.GetValues(typeof(DayOfWeek)))
@@ -114,10 +130,27 @@ namespace SmartCare.DAL.Utils
                 BloodType = BloodType.A_Positive ,
                 EmailConfirmed = true ,
             };
+            var patient2 = new Patient()
+            {
+                FullName = "Baraa Jetawi",
+                UserName = "baraa",
+                Email = "baraajetawi@gmail.com",
+                EmailConfirmed = true ,
+                PhoneNumber = "0599555522",
+                EmergencyPhone = "0599112233",
+                Address = "Tulkarm",
+                Gendar = Gendar.Boy,
+                BirthDate = new DateTime(2004, 9, 12),
+                BloodType = BloodType.O_Positive,
+            };
             await _userManager.CreateAsync(patient, "Pass@1212");
+            await _userManager.CreateAsync(patient2, "Pass@1212");
+
             await _userManager.AddToRoleAsync(patient, "Patient");
-            _context.Patients.Add(patient);
-            await _context.SaveChangesAsync();
+            await _userManager.AddToRoleAsync(patient2, "Patient");
+
+            //_context.Patients.Add(patient);
+            //await _context.SaveChangesAsync();
         }
 
         // =============================================== 
@@ -126,8 +159,8 @@ namespace SmartCare.DAL.Utils
         {
             if (await _context.Appointments.AnyAsync()) return;
 
-            var doctor = await _context.Doctors.FirstAsync();
-            var patient = await _context.Patients.FirstAsync();
+            var doctor = await _userManager.FindByEmailAsync("LaethNueirat@gmail.com");
+            var patient = await _userManager.FindByEmailAsync("TareqShreem@gmail.com");
 
             // Appointment
             var appointment = new Appointment
@@ -213,28 +246,13 @@ namespace SmartCare.DAL.Utils
                     Email = "fahmawe09@gmail.com",
                     EmailConfirmed = true
                 };
-                var user2 = new ApplicationUser()
-                {
-                    FullName = "Dr. Majdi Yakoub",
-                    UserName = "drmajdi",
-                    Email = "majdiyakoub@gmail.com",
-                    EmailConfirmed = true
-                };
-                var user3 = new ApplicationUser()
-                {
-                    FullName = "Baraa Jetawi",
-                    UserName = "baraa",
-                    Email = "baraajetawi@gmail.com",
-                    EmailConfirmed = true
-                };
+              
                 // Create Users
                 await _userManager.CreateAsync(user1 , "Pass@1212");
-                await _userManager.CreateAsync(user2, "Pass@1212");
-                await _userManager.CreateAsync(user3, "Pass@1212");
+
                 // Assign Roles
                 await _userManager.AddToRoleAsync(user1, "Admin");
-                await _userManager.AddToRoleAsync(user2, "Doctor");
-                await _userManager.AddToRoleAsync(user3, "Patient");
+
             }
             await _context.SaveChangesAsync();
         }

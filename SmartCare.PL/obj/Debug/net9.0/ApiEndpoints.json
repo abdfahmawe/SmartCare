@@ -1,26 +1,6 @@
 [
   {
     "ContainingType": "SmartCare.PL.Areas.Doctor.Controllers.DoctorsController",
-    "Method": "GetWorkingHours",
-    "RelativePath": "api/Doctor/Doctors/GetWorkingHours",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.List\u00601[[SmartCare.DAL.DTO.Responses.WorkingTimeResponse, SmartCare.DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "SmartCare.PL.Areas.Doctor.Controllers.DoctorsController",
     "Method": "GetProfile",
     "RelativePath": "api/Doctor/Doctors/Profile",
     "HttpMethod": "GET",
@@ -50,6 +30,94 @@
       {
         "Name": "requist",
         "Type": "SmartCare.DAL.DTO.Requists.UpdateDoctorRequist",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SmartCare.PL.Areas.Doctor.Controllers.DoctorWorkingTimeController",
+    "Method": "DeleteWorkingTime",
+    "RelativePath": "api/Doctor/DoctorWorkingTime/DeleteWorkingTime",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Day",
+        "Type": "SmartCare.DAL.DTO.Requists.DeleteWorkingTimeRequist",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SmartCare.PL.Areas.Doctor.Controllers.DoctorWorkingTimeController",
+    "Method": "GetWorkingHours",
+    "RelativePath": "api/Doctor/DoctorWorkingTime/GetWorkingHours",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SmartCare.DAL.DTO.Responses.WorkingTimeResponse, SmartCare.DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SmartCare.PL.Areas.Doctor.Controllers.DoctorWorkingTimeController",
+    "Method": "SetWorkingHours",
+    "RelativePath": "api/Doctor/DoctorWorkingTime/SetWorkingHours",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requist",
+        "Type": "SmartCare.DAL.DTO.Requists.DoctorWorkingTimeRequist",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartCare.PL.Areas.Doctor.Controllers.DoctorWorkingTimeController",
+    "Method": "UpdateWorkingHours",
+    "RelativePath": "api/Doctor/DoctorWorkingTime/UpdateWorkingHours",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requist",
+        "Type": "SmartCare.DAL.DTO.Requists.DoctorWorkingTimeRequist",
         "IsRequired": true
       }
     ],
@@ -264,7 +332,7 @@
     "ContainingType": "SmartCare.PL.Areas.Paitent.Controllers.PatientController",
     "Method": "UpdateProfile",
     "RelativePath": "api/Patient/Patient/UpdateProfile",
-    "HttpMethod": "PUT",
+    "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
     "Parameters": [

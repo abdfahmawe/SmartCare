@@ -39,31 +39,15 @@ namespace SmartCare.BLL.Services.Classes
             return response;
         }
 
-        public async Task<List<WorkingTimeResponse>> GetWorkingHoursAsync(string doctorId)
-        {
-            var workingHours = await _doctorRepositry.GetWorkingTimeAsync(doctorId);
-            var response = new List<WorkingTimeResponse>();
-            foreach(var item in workingHours)
-            {
-                response.Add(new WorkingTimeResponse()
-                {
-                    DoctorName = item.Doctor.FullName,
-                    Day = item.Day,
-                    StartTime = item.StartTime,
-                    EndTime = item.EndTime,
-                });
-            }
-            return response;
-        }
 
         public async Task<string> UpdateProfileAsync(string doctorId, UpdateDoctorRequist requist)
         {
            
             var doctor = await _doctorRepositry.GetProfileAsync(doctorId);
             doctor.FullName = requist.FullName;
-            doctor.PhoneNumber = requist.PhoneNumber;
             doctor.EmergencyPhone = requist.EmergencyPhone;
             doctor.City = requist.City;
+           
             var result = await _doctorRepositry.UpdateDoctorAsync(doctor);
             await _emailSender.SendEmailAsync(doctor.Email, "Profile Updated", "Your profile has been successfully updated.");
 

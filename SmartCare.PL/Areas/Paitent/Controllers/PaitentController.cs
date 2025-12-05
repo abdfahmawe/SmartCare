@@ -28,7 +28,7 @@ namespace SmartCare.PL.Areas.Paitent.Controllers
             var result = await _pateintService.GetPatientByIdAsync(userId);
             return Ok(result);
         }
-        [HttpPut("UpdateProfile")]
+        [HttpPatch("UpdateProfile")]
         public async Task<ActionResult<Patient>> UpdateProfile([FromBody]UpdatePatientRequist dto)
         {
             var userId = User.FindFirst(ClaimTypes.NameIdentifier)!.Value;

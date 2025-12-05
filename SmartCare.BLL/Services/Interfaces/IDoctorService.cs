@@ -13,6 +13,6 @@ namespace SmartCare.BLL.Services.Interfaces
     {
         Task<DoctorProfileResponse> GetProfileAsync(string doctorId);
         Task<string> UpdateProfileAsync(string doctorId , UpdateDoctorRequist requist);
-        Task<List<WorkingTimeResponse>> GetWorkingHoursAsync(string doctorId);
+        
     }
 }

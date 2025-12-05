@@ -35,12 +35,6 @@ namespace SmartCare.PL.Areas.Doctor.Controllers
             var updateResult = await _doctorService.UpdateProfileAsync(doctorId , requist);
             return Ok(updateResult);
         }
-        [HttpGet("GetWorkingHours")]
-        public async Task<ActionResult<List<WorkingTimeResponse>>> GetWorkingHours()
-        {
-            var doctorId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            var workingHours = await _doctorService.GetWorkingHoursAsync(doctorId);
-            return Ok(workingHours);
-        }
+      
     }
 }

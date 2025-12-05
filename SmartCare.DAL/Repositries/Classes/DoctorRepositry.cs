@@ -25,14 +25,11 @@ namespace SmartCare.DAL.Repositries.Classes
             return doctor;
         }
 
-        public async Task<List<WorkingTime>> GetWorkingTimeAsync(string doctorId)
-        {
-           var workingTimes = await _dbContext.WorkingTimes.Include(i=>i.Doctor).Where(w=>w.DoctorId == doctorId).ToListAsync();
-            return workingTimes;
-        }
+       
 
         public async Task<string> UpdateDoctorAsync(Doctor doctor)
         {
+          
            _dbContext.Doctors.Update(doctor);
             await _dbContext.SaveChangesAsync();
             return "Updated Successfully";

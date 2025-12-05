@@ -33,10 +33,12 @@ namespace SmartCare.BLL.Services.Classes
         public async Task<Patient> UpdateProfileAsync(string UserId, UpdatePatientRequist dto)
         {
             var existingUser = await _patientRepositry.GetPaitentByIdAsync(UserId);
-            var updatedPatient = dto.Adapt(existingUser);
-            await _patientRepositry.UpdatePatientAsync(updatedPatient);
-            await _emailSender.SendEmailAsync(updatedPatient.Email , "Profile Updated", "Your profile has been successfully updated.");
-            return updatedPatient;
+            existingUser.EmergencyPhone = dto.EmergencyPhone;
+            existingUser.Address = dto.Address;
+            existingUser.FullName = dto.FullName;
+            await _patientRepositry.UpdatePatientAsync(existingUser);
+            await _emailSender.SendEmailAsync(existingUser.Email , "Profile Updated", "Your profile has been successfully updated.");
+            return existingUser;
         }
 
         public async Task<List<MedicalRecord>> GetMedicalRecordsAsync(string UserId)
