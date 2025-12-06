@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmartCare.DAL.DTO.Responses
+namespace SmartCare.DAL.DTO.Requists
 {
-   public class AvailableSlotDto
+   public class BookAppointmentRequist
     {
+        public string DoctorId { get; set; }
         public DateTime StartAt { get; set; }
-        public DateTime EndAt { get; set; }
     }
 }

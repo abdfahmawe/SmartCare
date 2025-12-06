@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.dal\\dto\\responses\\availableslotresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|solutionrelative:smartcare.dal\\dto\\responses\\availableslotresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{44A6F172-DAEE-4335-AA01-7C8ADD5BE78B}|SmartCare.BLL\\SmartCare.BLL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.bll\\services\\classes\\doctorappointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44A6F172-DAEE-4335-AA01-7C8ADD5BE78B}|SmartCare.BLL\\SmartCare.BLL.csproj|solutionrelative:smartcare.bll\\services\\classes\\doctorappointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AvailableSlotResponse.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\DTO\\Responses\\AvailableSlotResponse.cs",
-              "RelativeDocumentMoniker": "SmartCare.DAL\\DTO\\Responses\\AvailableSlotResponse.cs",
-              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\DTO\\Responses\\AvailableSlotResponse.cs",
-              "RelativeToolTip": "SmartCare.DAL\\DTO\\Responses\\AvailableSlotResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAcAAAAAAAAAA==",
+              "Title": "DoctorAppointmentService.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.BLL\\Services\\Classes\\DoctorAppointmentService.cs",
+              "RelativeDocumentMoniker": "SmartCare.BLL\\Services\\Classes\\DoctorAppointmentService.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.BLL\\Services\\Classes\\DoctorAppointmentService.cs",
+              "RelativeToolTip": "SmartCare.BLL\\Services\\Classes\\DoctorAppointmentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-05T12:57:59.345Z",
+              "WhenOpened": "2025-12-06T18:27:16.511Z",
               "EditorCaption": ""
             }
           ]

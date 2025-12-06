@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace SmartCare.DAL.DTO.Responses
 {
-   public class AvailableSlotDto
+   public class DoctorsWithIdsResponse
     {
-        public DateTime StartAt { get; set; }
-        public DateTime EndAt { get; set; }
+        public string DoctorId { get; set; }
+        public string FullName { get; set; }
     }
 }

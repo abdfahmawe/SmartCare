@@ -373,5 +373,82 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "SmartCare.PL.Areas.Paitent.Controllers.PatientAppointmentsController",
+    "Method": "GetSlots",
+    "RelativePath": "api/Patient/PatientAppointments/AvailableSlots",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "doctorId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "date",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SmartCare.DAL.DTO.Responses.AvailableSlotsResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SmartCare.PL.Areas.Paitent.Controllers.PatientAppointmentsController",
+    "Method": "BookAppointment",
+    "RelativePath": "api/Patient/PatientAppointments/BookAppointment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requist",
+        "Type": "SmartCare.DAL.DTO.Requists.BookAppointmentRequist",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SmartCare.DAL.Models.Appointment",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SmartCare.PL.Areas.Paitent.Controllers.PatientAppointmentsController",
+    "Method": "GetAllDoctorsWithIds",
+    "RelativePath": "api/Patient/PatientAppointments/GetAllDoctorsWithIds",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SmartCare.DAL.DTO.Responses.DoctorsWithIdsResponse, SmartCare.DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]
