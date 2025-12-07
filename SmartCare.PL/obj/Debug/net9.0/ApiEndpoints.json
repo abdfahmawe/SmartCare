@@ -1,5 +1,31 @@
 [
   {
+    "ContainingType": "SmartCare.PL.Areas.Doctor.Controllers.DoctorAppointmentsController",
+    "Method": "GetAllAppointment",
+    "RelativePath": "api/Doctor/DoctorAppointments/GetAllAppointmentOnlyScheduled",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "onlySchedueld",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SmartCare.DAL.DTO.Responses.DoctorAppointmentResponseDTO, SmartCare.DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "SmartCare.PL.Areas.Doctor.Controllers.DoctorsController",
     "Method": "GetProfile",
     "RelativePath": "api/Doctor/Doctors/Profile",

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SmartCare.BLL.Services.Interfaces;
 using SmartCare.DAL.DTO.Responses;
+using System.Security.Claims;
 
 namespace SmartCare.PL.Areas.Doctor.Controllers
 {
@@ -18,7 +19,13 @@ namespace SmartCare.PL.Areas.Doctor.Controllers
         {
             _doctorAppointmentService = doctorAppointmentService;
         }
-        
-      
+        [HttpGet("GetAllAppointmentOnlyScheduled")]
+        public async Task<ActionResult<List<DoctorAppointmentResponseDTO>>> GetAllAppointment([FromQuery]bool onlySchedueld = true)
+        {
+            var doctorId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var result = await _doctorAppointmentService.GetAllAppointmentsAsync(doctorId , onlySchedueld);
+            return Ok(result);
+        }
+
     }
 }

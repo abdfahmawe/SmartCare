@@ -9,7 +9,7 @@ namespace SmartCare.BLL.Services.Interfaces
 {
     public interface IDoctorAppointmentService
     {
-        
+        Task<List<DoctorAppointmentResponseDTO>> GetAllAppointmentsAsync(string doctorId , bool onlySchedueld=true);
 
     }
 }

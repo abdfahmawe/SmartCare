@@ -9,6 +9,6 @@ namespace SmartCare.DAL.Repositries.Interfaces
 {
    public interface IDoctorAppointmentRepository
     {
-       
+       Task<List<Appointment>> GetAll(string doctorId , bool onlySchedueld=true);
     }
 }

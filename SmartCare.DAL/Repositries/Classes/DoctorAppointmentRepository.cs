@@ -19,6 +19,14 @@ namespace SmartCare.DAL.Repositries.Classes
             _dbContext = dbContext;
         }
 
-     
+        public async Task<List<Appointment>> GetAll(string doctorId, bool onlySchedueld = true)
+        {
+            var appointments =await _dbContext.Appointments.Include(e=>e.Patient).Where(a=>a.DoctorId ==doctorId).ToListAsync();
+            if (onlySchedueld == true)
+            {
+                appointments = appointments.Where(e => e.Status == AppointmentStatus.Scheduled).ToList();
+            }
+            return appointments;
+        }
     }
 }

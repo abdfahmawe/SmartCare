@@ -14,10 +14,27 @@ namespace SmartCare.BLL.Services.Classes
 {
    public class DoctorAppointmentService : IDoctorAppointmentService
     {
-        private readonly IDoctorAppointmentRepository _repo;
-        public DoctorAppointmentService(IDoctorAppointmentRepository repo)
+        private readonly IDoctorAppointmentRepository _doctorAppointmentRepository;
+
+        public DoctorAppointmentService(IDoctorAppointmentRepository doctorAppointmentRepository)
         {
-            _repo = repo;
+            _doctorAppointmentRepository = doctorAppointmentRepository;
+        }
+
+        public async Task<List<DoctorAppointmentResponseDTO>> GetAllAppointmentsAsync(string doctorId , bool onlySchedueld=true)
+        {
+            var appointments =await _doctorAppointmentRepository.GetAll(doctorId , onlySchedueld);
+            var response = appointments.Select(a => new DoctorAppointmentResponseDTO
+            {
+                Id = a.Id,
+                PatientId = a.PatientId,
+                PatientName = a.Patient.FullName,
+                DurationMinutes = a.DurationMinutes,
+                Status = a.Status,
+                StartAt = a.StartAt,
+                EndAt = a.EndAt,
+            }).ToList();
+            return response;
         }
     }
 }
