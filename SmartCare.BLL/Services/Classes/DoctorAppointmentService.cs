@@ -21,6 +21,11 @@ namespace SmartCare.BLL.Services.Classes
             _doctorAppointmentRepository = doctorAppointmentRepository;
         }
 
+        public async Task<Appointment> CompleteAppointmentAsync(string doctorId, string AppointmentID)
+        {
+           return await _doctorAppointmentRepository.CompleteAppointmentAsync(doctorId, AppointmentID);
+        }
+
         public async Task<List<DoctorAppointmentResponseDTO>> GetAllAppointmentsAsync(string doctorId , bool onlySchedueld=true)
         {
             var appointments =await _doctorAppointmentRepository.GetAll(doctorId , onlySchedueld);

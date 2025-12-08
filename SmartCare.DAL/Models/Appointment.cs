@@ -26,11 +26,11 @@ namespace SmartCare.DAL.Models
         public string DoctorId { get; set; }
         public Doctor Doctor { get; set; }
         public string? InvoiceId { get; set; }
-        public Invoice? Invoice { get; set; }
+        public Invoice? Invoice { get; set; } // هل دفع او لا والطريقة والوقت 
         public string? MedicalRecordId { get; set; }
         public MedicalRecord? MedicalRecord { get; set; }
-        public ICollection<Prescription> Prescriptions { get; set; }
-        public ICollection<MedicalFile> MedicalFiles { get; set; }
+        public ICollection<Prescription> Prescriptions { get; set; } // وصفة طبية 
+        public ICollection<MedicalFile> MedicalFiles { get; set; } // صورة اشعة او اشي زي هيك
 
 
     }

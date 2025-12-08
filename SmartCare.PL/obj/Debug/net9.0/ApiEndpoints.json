@@ -1,6 +1,22 @@
 [
   {
     "ContainingType": "SmartCare.PL.Areas.Doctor.Controllers.DoctorAppointmentsController",
+    "Method": "CompleteAppointment",
+    "RelativePath": "api/Doctor/DoctorAppointments/CompleteAppointment/{appointmentId}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "appointmentId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartCare.PL.Areas.Doctor.Controllers.DoctorAppointmentsController",
     "Method": "GetAllAppointment",
     "RelativePath": "api/Doctor/DoctorAppointments/GetAllAppointmentOnlyScheduled",
     "HttpMethod": "GET",
