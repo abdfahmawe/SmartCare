@@ -89,7 +89,8 @@ namespace SmartCare.BLL.Services.Classes
 
             };
             var result =await _userManager.CreateAsync(user, registerRequist.Password);
-            if(result.Succeeded)
+            await _userManager.AddToRoleAsync(user, "Patient");
+            if (result.Succeeded)
             {
                 var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                 var escapeToken = Uri.EscapeDataString(token);
@@ -97,7 +98,7 @@ namespace SmartCare.BLL.Services.Classes
                 await _emailSender.SendEmailAsync(user.Email , "Confarim Email", $"<a href={urlEmail}>click here</a>");
                 return new UserResponse()
                 {
-                    Token = user.Email,
+                    Token = "Check Your Email to Confirm",
                 };
             }
             else

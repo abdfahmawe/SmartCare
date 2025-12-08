@@ -22,6 +22,14 @@ namespace SmartCare.BLL.Services.Classes
 
         public async Task<Appointment> BookAppointmentAsync(string patientId, BookAppointmentRequist requist)
         {
+            if (requist.StartAt < DateTime.Now)
+            {
+                throw new Exception("The appointment time must be in the future. Please select a valid time.");
+            }
+            else if(requist.StartAt > DateTime.Today.AddDays(30))
+            {
+                throw new Exception("Appointments can only be booked up to 30 days in advance. Please select a closer date.");
+            }
             bool withinWorkingHours = await _patientAppointmentRepositry.IsWithinWorkingHours(requist.DoctorId, requist.StartAt);
             if (!withinWorkingHours)
             {

@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using SmartCare.PL.Helpers;
 using SmartCare.DAL.Repositries.Interfaces;
 using SmartCare.DAL.Repositries.Classes;
+using SmartCare.BLL.BackgroundJobs;
 
 namespace SmartCare.PL
 {
@@ -41,7 +42,11 @@ namespace SmartCare.PL
             builder.Services.AddScoped<IDoctorWorkingTimeRepositry, DoctorWorkingTimeRepositry>();
             builder.Services.AddScoped<IDoctorAppointmentRepository, DoctorAppointmentRepository>();
             builder.Services.AddScoped<IDoctorAppointmentService, DoctorAppointmentService>();
-
+            //
+            builder.Services.AddHostedService<AppointmentStatusChecker>();
+            builder.Services.AddScoped<IAppointmentService, AppointmentService>();
+            builder.Services.AddScoped<IAppointmentRepository, AppointmentRepository>();
+            //
             builder.Services.AddScoped<IAuthenticationUser , AuthenticationUser>();
             builder.Services.AddScoped<IEmailSender,EmailSetting>();
 

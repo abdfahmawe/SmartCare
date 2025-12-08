@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.dal\\repositries\\classes\\doctorappointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|solutionrelative:smartcare.dal\\repositries\\classes\\doctorappointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.dal\\repositries\\classes\\appointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|solutionrelative:smartcare.dal\\repositries\\classes\\appointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.dal\\repositries\\interfaces\\iappointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|solutionrelative:smartcare.dal\\repositries\\interfaces\\iappointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44A6F172-DAEE-4335-AA01-7C8ADD5BE78B}|SmartCare.BLL\\SmartCare.BLL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.bll\\services\\classes\\appointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44A6F172-DAEE-4335-AA01-7C8ADD5BE78B}|SmartCare.BLL\\SmartCare.BLL.csproj|solutionrelative:smartcare.bll\\services\\classes\\appointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44A6F172-DAEE-4335-AA01-7C8ADD5BE78B}|SmartCare.BLL\\SmartCare.BLL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.bll\\services\\interfaces\\iappointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44A6F172-DAEE-4335-AA01-7C8ADD5BE78B}|SmartCare.BLL\\SmartCare.BLL.csproj|solutionrelative:smartcare.bll\\services\\interfaces\\iappointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44A6F172-DAEE-4335-AA01-7C8ADD5BE78B}|SmartCare.BLL\\SmartCare.BLL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.bll\\backgroundjobs\\appointmentstatuschecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44A6F172-DAEE-4335-AA01-7C8ADD5BE78B}|SmartCare.BLL\\SmartCare.BLL.csproj|solutionrelative:smartcare.bll\\backgroundjobs\\appointmentstatuschecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/./SmartCare/True/SqlTable/dbo.Appointments.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
@@ -13,24 +29,12 @@
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/./SmartCare/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.dal\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|solutionrelative:smartcare.dal\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7FB1A0FB-6F88-4C25-96B6-75E1D7628E28}|SmartCare.PL\\SmartCare.PL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FB1A0FB-6F88-4C25-96B6-75E1D7628E28}|SmartCare.PL\\SmartCare.PL.csproj|solutionrelative:smartcare.pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB1A0FB-6F88-4C25-96B6-75E1D7628E28}|SmartCare.PL\\SmartCare.PL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.pl\\areas\\doctor\\controllers\\doctorappointmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FB1A0FB-6F88-4C25-96B6-75E1D7628E28}|SmartCare.PL\\SmartCare.PL.csproj|solutionrelative:smartcare.pl\\areas\\doctor\\controllers\\doctorappointmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44A6F172-DAEE-4335-AA01-7C8ADD5BE78B}|SmartCare.BLL\\SmartCare.BLL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.bll\\services\\classes\\doctorappointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{44A6F172-DAEE-4335-AA01-7C8ADD5BE78B}|SmartCare.BLL\\SmartCare.BLL.csproj|solutionrelative:smartcare.bll\\services\\classes\\doctorappointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.dal\\repositries\\interfaces\\idoctorappointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|solutionrelative:smartcare.dal\\repositries\\interfaces\\idoctorappointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44A6F172-DAEE-4335-AA01-7C8ADD5BE78B}|SmartCare.BLL\\SmartCare.BLL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.bll\\services\\interfaces\\idoctorappointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{44A6F172-DAEE-4335-AA01-7C8ADD5BE78B}|SmartCare.BLL\\SmartCare.BLL.csproj|solutionrelative:smartcare.bll\\services\\interfaces\\idoctorappointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{44A6F172-DAEE-4335-AA01-7C8ADD5BE78B}|SmartCare.BLL\\SmartCare.BLL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.bll\\services\\classes\\patientappointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44A6F172-DAEE-4335-AA01-7C8ADD5BE78B}|SmartCare.BLL\\SmartCare.BLL.csproj|solutionrelative:smartcare.bll\\services\\classes\\patientappointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -44,100 +48,113 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "dbo.Users [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/./SmartCare/True/SqlTable/dbo.Users.sql",
-              "ToolTip": "dbo.Users [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-12-08T19:01:58.921Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "dbo.Appointments [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/./SmartCare/True/SqlTable/dbo.Appointments.sql",
               "ToolTip": "dbo.Appointments [Data]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-12-08T18:57:15.925Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DoctorAppointmentRepository.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\Repositries\\Classes\\DoctorAppointmentRepository.cs",
-              "RelativeDocumentMoniker": "SmartCare.DAL\\Repositries\\Classes\\DoctorAppointmentRepository.cs",
-              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\Repositries\\Classes\\DoctorAppointmentRepository.cs",
-              "RelativeToolTip": "SmartCare.DAL\\Repositries\\Classes\\DoctorAppointmentRepository.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T18:45:24.156Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IDoctorAppointmentRepository.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\Repositries\\Interfaces\\IDoctorAppointmentRepository.cs",
-              "RelativeDocumentMoniker": "SmartCare.DAL\\Repositries\\Interfaces\\IDoctorAppointmentRepository.cs",
-              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\Repositries\\Interfaces\\IDoctorAppointmentRepository.cs",
-              "RelativeToolTip": "SmartCare.DAL\\Repositries\\Interfaces\\IDoctorAppointmentRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T18:44:37.236Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DoctorAppointmentService.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.BLL\\Services\\Classes\\DoctorAppointmentService.cs",
-              "RelativeDocumentMoniker": "SmartCare.BLL\\Services\\Classes\\DoctorAppointmentService.cs",
-              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.BLL\\Services\\Classes\\DoctorAppointmentService.cs",
-              "RelativeToolTip": "SmartCare.BLL\\Services\\Classes\\DoctorAppointmentService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T18:44:00.087Z",
+              "WhenOpened": "2025-12-08T20:35:50.025Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "IDoctorAppointmentService.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.BLL\\Services\\Interfaces\\IDoctorAppointmentService.cs",
-              "RelativeDocumentMoniker": "SmartCare.BLL\\Services\\Interfaces\\IDoctorAppointmentService.cs",
-              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.BLL\\Services\\Interfaces\\IDoctorAppointmentService.cs",
-              "RelativeToolTip": "SmartCare.BLL\\Services\\Interfaces\\IDoctorAppointmentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAYAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.PL\\Program.cs",
+              "RelativeDocumentMoniker": "SmartCare.PL\\Program.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.PL\\Program.cs",
+              "RelativeToolTip": "SmartCare.PL\\Program.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwC8AAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T18:43:20.06Z",
+              "WhenOpened": "2025-12-08T20:33:20.445Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DoctorAppointmentsController.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.PL\\Areas\\Doctor\\Controllers\\DoctorAppointmentsController.cs",
-              "RelativeDocumentMoniker": "SmartCare.PL\\Areas\\Doctor\\Controllers\\DoctorAppointmentsController.cs",
-              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.PL\\Areas\\Doctor\\Controllers\\DoctorAppointmentsController.cs",
-              "RelativeToolTip": "SmartCare.PL\\Areas\\Doctor\\Controllers\\DoctorAppointmentsController.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwB0AAABHAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "AppointmentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\Repositries\\Classes\\AppointmentRepository.cs",
+              "RelativeDocumentMoniker": "SmartCare.DAL\\Repositries\\Classes\\AppointmentRepository.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\Repositries\\Classes\\AppointmentRepository.cs",
+              "RelativeToolTip": "SmartCare.DAL\\Repositries\\Classes\\AppointmentRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T18:42:30.22Z",
+              "WhenOpened": "2025-12-08T20:25:14.609Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IAppointmentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\Repositries\\Interfaces\\IAppointmentRepository.cs",
+              "RelativeDocumentMoniker": "SmartCare.DAL\\Repositries\\Interfaces\\IAppointmentRepository.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\Repositries\\Interfaces\\IAppointmentRepository.cs",
+              "RelativeToolTip": "SmartCare.DAL\\Repositries\\Interfaces\\IAppointmentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T20:24:57.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppointmentService.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.BLL\\Services\\Classes\\AppointmentService.cs",
+              "RelativeDocumentMoniker": "SmartCare.BLL\\Services\\Classes\\AppointmentService.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.BLL\\Services\\Classes\\AppointmentService.cs",
+              "RelativeToolTip": "SmartCare.BLL\\Services\\Classes\\AppointmentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T20:22:32.13Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Appointment.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\Models\\Appointment.cs",
-              "RelativeDocumentMoniker": "SmartCare.DAL\\Models\\Appointment.cs",
-              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\Models\\Appointment.cs",
-              "RelativeToolTip": "SmartCare.DAL\\Models\\Appointment.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAiAAAAAAAAAA==",
+              "Title": "IAppointmentService.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.BLL\\Services\\Interfaces\\IAppointmentService.cs",
+              "RelativeDocumentMoniker": "SmartCare.BLL\\Services\\Interfaces\\IAppointmentService.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.BLL\\Services\\Interfaces\\IAppointmentService.cs",
+              "RelativeToolTip": "SmartCare.BLL\\Services\\Interfaces\\IAppointmentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T07:38:58.526Z",
+              "WhenOpened": "2025-12-08T20:22:11.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AppointmentStatusChecker.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.BLL\\BackgroundJobs\\AppointmentStatusChecker.cs",
+              "RelativeDocumentMoniker": "SmartCare.BLL\\BackgroundJobs\\AppointmentStatusChecker.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.BLL\\BackgroundJobs\\AppointmentStatusChecker.cs",
+              "RelativeToolTip": "SmartCare.BLL\\BackgroundJobs\\AppointmentStatusChecker.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAowBcAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T20:12:03.088Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "dbo.Users [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/./SmartCare/True/SqlTable/dbo.Users.sql",
+              "ToolTip": "dbo.Users [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-12-08T19:31:31.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PatientAppointmentService.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.BLL\\Services\\Classes\\PatientAppointmentService.cs",
+              "RelativeDocumentMoniker": "SmartCare.BLL\\Services\\Classes\\PatientAppointmentService.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.BLL\\Services\\Classes\\PatientAppointmentService.cs",
+              "RelativeToolTip": "SmartCare.BLL\\Services\\Classes\\PatientAppointmentService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABYAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T19:54:06.29Z",
               "EditorCaption": ""
             }
           ]
