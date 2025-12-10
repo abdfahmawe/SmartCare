@@ -44,6 +44,7 @@ namespace SmartCare.PL.Areas.Paitent.Controllers
         [HttpPost("BookAppointment")]
         public async Task<ActionResult<Appointment>> BookAppointment([FromBody] BookAppointmentRequist requist)
         {
+            
             var patientId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var appointmentBooking = await _patientAppointmentService.BookAppointmentAsync(patientId, requist);
             return Ok(appointmentBooking);

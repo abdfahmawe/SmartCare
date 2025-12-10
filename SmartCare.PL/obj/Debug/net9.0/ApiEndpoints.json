@@ -42,6 +42,27 @@
     ]
   },
   {
+    "ContainingType": "SmartCare.PL.Areas.Doctor.Controllers.DoctorMedicalRecordsController",
+    "Method": "CreateMedicalRecord",
+    "RelativePath": "api/Doctor/DoctorMedicalRecords/CreateMedicalRecord/{appointmentId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "appointmentId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "medicalRecordRequist",
+        "Type": "SmartCare.DAL.DTO.Requists.MedicalRecordRequist",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "SmartCare.PL.Areas.Doctor.Controllers.DoctorsController",
     "Method": "GetProfile",
     "RelativePath": "api/Doctor/Doctors/Profile",

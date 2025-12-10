@@ -19,7 +19,8 @@ namespace SmartCare.DAL.Repositries.Classes
         }
         public async Task MarkNoShowsAsync()
         {
-            var appointment = await _dbContext.Appointments.Where(a => a.Status == Models.AppointmentStatus.Scheduled && DateTime.Now > a.EndAt).ToListAsync();
+            var timeNow = DateTime.Now;
+            var appointment = await _dbContext.Appointments.Where(a => a.Status == Models.AppointmentStatus.Scheduled && timeNow > a.EndAt).ToListAsync();
             foreach (var app in appointment)
             {
                 app.Status = Models.AppointmentStatus.NoShow;

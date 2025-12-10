@@ -16,7 +16,7 @@ namespace SmartCare.DAL.Models
         Pending,
         Approved
     }
-    public class Invoice 
+    public class Invoice // فاتورة
     {
         public string Id { get; set; } = Guid.NewGuid().ToString();
         public decimal Amount { get; set; }

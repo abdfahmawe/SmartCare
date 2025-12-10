@@ -17,8 +17,8 @@ namespace SmartCare.DAL.Models
     {
         public string Id { get; set; } = Guid.NewGuid().ToString();
         public AppointmentStatus Status { get; set; } 
-        public DateTime StartAt { get; set; }
-        public DateTime EndAt { get; set; }
+        public DateTime StartAt { get; set; } // want to store in UTC format 
+        public DateTime EndAt { get; set; } // want to store in UTC format
         public int DurationMinutes { get; set; } = 30;
         // navigation properties
         public string PatientId { get; set; }

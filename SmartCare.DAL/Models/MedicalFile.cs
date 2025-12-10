@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SmartCare.DAL.Models
 {
-   public class MedicalFile 
+   public class MedicalFile // ملف طبي مثل صور اشعة او تقارير
     {
         public string Id { get; set; } = Guid.NewGuid().ToString();
         public string FileUrl { get; set; }

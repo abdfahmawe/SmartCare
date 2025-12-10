@@ -42,6 +42,8 @@ namespace SmartCare.PL
             builder.Services.AddScoped<IDoctorWorkingTimeRepositry, DoctorWorkingTimeRepositry>();
             builder.Services.AddScoped<IDoctorAppointmentRepository, DoctorAppointmentRepository>();
             builder.Services.AddScoped<IDoctorAppointmentService, DoctorAppointmentService>();
+            builder.Services.AddScoped<IDoctorMedicalRecordRepositry, DoctorMedicalRecordRepositry>();
+            builder.Services.AddScoped<IDoctorMedicalRecordservices, DoctorMedicalRecordservices>();
             //
             builder.Services.AddHostedService<AppointmentStatusChecker>();
             builder.Services.AddScoped<IAppointmentService, AppointmentService>();

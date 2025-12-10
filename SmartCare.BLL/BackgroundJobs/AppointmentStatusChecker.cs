@@ -21,7 +21,7 @@ namespace SmartCare.BLL.BackgroundJobs
             while (!stoppingToken.IsCancellationRequested)
             {
                 // شغّل المهمة كل دقيقة
-                await Task.Delay(TimeSpan.FromMinutes(30), stoppingToken);
+                await Task.Delay(TimeSpan.FromMinutes(1), stoppingToken);
 
                 using (var scope = _serviceProvider.CreateScope())
                 {
