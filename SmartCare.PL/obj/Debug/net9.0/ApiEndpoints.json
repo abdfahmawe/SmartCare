@@ -63,6 +63,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "SmartCare.PL.Areas.Doctor.Controllers.DoctorMedicalRecordsController",
+    "Method": "GetAllMedicalRecords",
+    "RelativePath": "api/Doctor/DoctorMedicalRecords/GetAllMedicalRecords",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartCare.PL.Areas.Doctor.Controllers.DoctorMedicalRecordsController",
+    "Method": "GetMedicalRecord",
+    "RelativePath": "api/Doctor/DoctorMedicalRecords/GetMedicalRecord/{appointmentId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "appointmentId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "SmartCare.PL.Areas.Doctor.Controllers.DoctorsController",
     "Method": "GetProfile",
     "RelativePath": "api/Doctor/Doctors/Profile",

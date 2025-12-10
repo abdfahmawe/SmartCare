@@ -26,5 +26,19 @@ namespace SmartCare.PL.Areas.Doctor.Controllers
            await _doctorMedicalRecordservices.CreateMedicalRecord(doctorId, appointmentId , medicalRecordRequist);
             return Ok(new { message = "MedicalRecord Created Successfuly" });
         }
+        [HttpGet("GetMedicalRecord/{appointmentId}")]
+        public async Task<IActionResult> GetMedicalRecord([FromRoute] string appointmentId)
+        {
+            var doctorId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var result =await _doctorMedicalRecordservices.GetMedicalRecordByAppointmentIdAsync(doctorId, appointmentId);
+            return Ok(result);
+        }
+        [HttpGet("GetAllMedicalRecords")]
+        public async Task<IActionResult> GetAllMedicalRecords()
+        {
+            var doctorId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var result = await _doctorMedicalRecordservices.GetAllMedicalRecordsAsync(doctorId);
+            return Ok(result);
+        }
     }
 }

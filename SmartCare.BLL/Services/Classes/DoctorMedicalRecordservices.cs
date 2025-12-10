@@ -1,5 +1,7 @@
-﻿using SmartCare.BLL.Services.Interfaces;
+﻿using Mapster;
+using SmartCare.BLL.Services.Interfaces;
 using SmartCare.DAL.DTO.Requists;
+using SmartCare.DAL.DTO.Responses;
 using SmartCare.DAL.Models;
 using SmartCare.DAL.Repositries.Interfaces;
 using System;
@@ -32,6 +34,20 @@ namespace SmartCare.BLL.Services.Classes
             };
          await _doctorMedicalRecordRepositry.CreateMedicalRecord(doctorId, medicalrecord);
           
+        }
+
+        public async Task<List<MedicalRecordResponse>> GetAllMedicalRecordsAsync(string doctorId)
+        {
+            var medicalRecords =await _doctorMedicalRecordRepositry.GetAllMedicalRecordsAsync(doctorId);
+            var medicalRecordResponses = medicalRecords.Adapt<List<MedicalRecordResponse>>();
+            return medicalRecordResponses;
+        }
+
+        public async Task<MedicalRecordResponse> GetMedicalRecordByAppointmentIdAsync(string doctorId, string appointmentId)
+        {
+            var medicalRecord = await _doctorMedicalRecordRepositry.GetMedicalRecordByAppointmentIdAsync(doctorId, appointmentId);
+            var medicalRecordResponse = medicalRecord.Adapt<MedicalRecordResponse>();
+            return medicalRecordResponse;
         }
     }
 }

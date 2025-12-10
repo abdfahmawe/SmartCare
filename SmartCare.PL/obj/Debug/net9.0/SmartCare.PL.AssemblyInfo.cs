@@ -11,11 +11,10 @@
 using System;
 using System.Reflection;
 
-
 [assembly: System.Reflection.AssemblyCompanyAttribute("SmartCare.PL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5c3dd6a2ce3c983a591ab3036b3129c5eb1e33c2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+05671d0081e8e8a517d04a62e5c45b51d889bb82")]
 [assembly: System.Reflection.AssemblyProductAttribute("SmartCare.PL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SmartCare.PL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

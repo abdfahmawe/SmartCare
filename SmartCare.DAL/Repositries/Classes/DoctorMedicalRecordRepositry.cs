@@ -40,5 +40,32 @@ namespace SmartCare.DAL.Repositries.Classes
             await _dbContext.SaveChangesAsync();
            
         }
+
+        public async Task<List<MedicalRecord>> GetAllMedicalRecordsAsync(string doctorId)
+        {
+            var medicalRecord = await _dbContext.MedicalRecords
+                .Include(mr => mr.Appointment)
+                .Where(mr => mr.Appointment.DoctorId == doctorId)
+                .ToListAsync();
+            if (medicalRecord is null)
+            {
+                throw new Exception("there is no medicalRecord for this doctor");
+            }
+           return medicalRecord;
+        }
+
+        public async Task<MedicalRecord> GetMedicalRecordByAppointmentIdAsync(string doctorId, string appointmentId)
+        {
+            var medicalRecord = await _dbContext.MedicalRecords.Include(a=>a.Appointment).FirstOrDefaultAsync(mr=>mr.AppointmentId == appointmentId);
+            if (medicalRecord is null)
+            {
+                throw new Exception("Medical record not found for the specified appointment.");
+            }
+            if(medicalRecord.Appointment.DoctorId != doctorId)
+            {
+                throw new Exception("You are not authorized to access this medical record.");
+            }
+            return medicalRecord;
+        }
     }
 }
