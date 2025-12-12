@@ -64,6 +64,22 @@
   },
   {
     "ContainingType": "SmartCare.PL.Areas.Doctor.Controllers.DoctorMedicalRecordsController",
+    "Method": "DeleteMedicalRecord",
+    "RelativePath": "api/Doctor/DoctorMedicalRecords/DeleteMedicalRecord/{appointmentId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "appointmentId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartCare.PL.Areas.Doctor.Controllers.DoctorMedicalRecordsController",
     "Method": "GetAllMedicalRecords",
     "RelativePath": "api/Doctor/DoctorMedicalRecords/GetAllMedicalRecords",
     "HttpMethod": "GET",
@@ -83,6 +99,27 @@
       {
         "Name": "appointmentId",
         "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartCare.PL.Areas.Doctor.Controllers.DoctorMedicalRecordsController",
+    "Method": "UpdateMedicalRecord",
+    "RelativePath": "api/Doctor/DoctorMedicalRecords/UpdateMedicalRecord/{appointmentId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "appointmentId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "medicalRecordRequist",
+        "Type": "SmartCare.DAL.DTO.Requists.MedicalRecordRequist",
         "IsRequired": true
       }
     ],

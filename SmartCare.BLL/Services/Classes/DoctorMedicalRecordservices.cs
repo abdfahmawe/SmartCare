@@ -36,6 +36,16 @@ namespace SmartCare.BLL.Services.Classes
           
         }
 
+        public async Task<bool> DeleteMedicalRecordAsync(string doctorId, string appointmentId)
+        {
+          var   delete = await _doctorMedicalRecordRepositry.DeleteMedicalRecordAsync(doctorId, appointmentId);
+            if(delete)
+            {
+                return true;
+            }
+            return false;
+        }
+
         public async Task<List<MedicalRecordResponse>> GetAllMedicalRecordsAsync(string doctorId)
         {
             var medicalRecords =await _doctorMedicalRecordRepositry.GetAllMedicalRecordsAsync(doctorId);
@@ -48,6 +58,22 @@ namespace SmartCare.BLL.Services.Classes
             var medicalRecord = await _doctorMedicalRecordRepositry.GetMedicalRecordByAppointmentIdAsync(doctorId, appointmentId);
             var medicalRecordResponse = medicalRecord.Adapt<MedicalRecordResponse>();
             return medicalRecordResponse;
+        }
+
+        public async Task UpdateMedicalRecordAsync(string doctorId, string appointmentId, MedicalRecordRequist medicalRecordRequist)
+        {
+            var MedicalRecord = await _doctorMedicalRecordRepositry.GetMedicalRecordByAppointmentIdAsync(doctorId, appointmentId);
+            if(MedicalRecord is null)
+            {
+                throw new Exception("Medical record not found.");
+            }
+            MedicalRecord.Allergies = medicalRecordRequist.Allergies;
+            MedicalRecord.Diagnosis = medicalRecordRequist.Diagnosis;
+            MedicalRecord.Symptoms = medicalRecordRequist.Symptoms;
+            MedicalRecord.Notes = medicalRecordRequist.Notes;
+            MedicalRecord.TestsNeeded = medicalRecordRequist.TestsNeeded;
+            MedicalRecord.VitalSigns = medicalRecordRequist.VitalSigns;
+            await _doctorMedicalRecordRepositry.UpdateMedicalRecordAsync(doctorId, MedicalRecord);
         }
     }
 }

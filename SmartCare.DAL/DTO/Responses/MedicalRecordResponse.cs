@@ -16,5 +16,6 @@ namespace SmartCare.DAL.DTO.Responses
         public string TestsNeeded { get; set; }        // الفحوصات المطلوبة
         public string Allergies { get; set; }          // الحساسية إن وجدت
         public DateTime CreatedAt { get; set; }
+        public string AppointmentId { get; set; }
     }
 }

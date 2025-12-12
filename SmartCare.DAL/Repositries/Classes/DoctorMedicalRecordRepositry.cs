@@ -41,17 +41,29 @@ namespace SmartCare.DAL.Repositries.Classes
            
         }
 
+        public async Task<bool> DeleteMedicalRecordAsync(string doctorId, string appointmentId)
+        {
+            var medicalRecord = await _dbContext.MedicalRecords.Include(mr => mr.Appointment).FirstOrDefaultAsync(mr => mr.AppointmentId == appointmentId && mr.Appointment.DoctorId == doctorId);
+            if(medicalRecord is null)
+            {
+                throw new Exception("Medical record not found or you are not authorized to delete it.");
+            }
+            _dbContext.MedicalRecords.Remove(medicalRecord);
+            await _dbContext.SaveChangesAsync();
+            return true;
+        }
+
         public async Task<List<MedicalRecord>> GetAllMedicalRecordsAsync(string doctorId)
         {
             var medicalRecord = await _dbContext.MedicalRecords
                 .Include(mr => mr.Appointment)
                 .Where(mr => mr.Appointment.DoctorId == doctorId)
                 .ToListAsync();
-            if (medicalRecord is null)
-            {
-                throw new Exception("there is no medicalRecord for this doctor");
-            }
-           return medicalRecord;
+            ////if (medicalRecord is null)
+            ////{
+            ////    throw new Exception("there is no medicalRecord for this doctor");
+            ////} there is no need because .ToListAsync will return empty list if there is no records
+            return medicalRecord;
         }
 
         public async Task<MedicalRecord> GetMedicalRecordByAppointmentIdAsync(string doctorId, string appointmentId)
@@ -66,6 +78,12 @@ namespace SmartCare.DAL.Repositries.Classes
                 throw new Exception("You are not authorized to access this medical record.");
             }
             return medicalRecord;
+        }
+
+        public async Task UpdateMedicalRecordAsync(string doctorId, MedicalRecord medicalRecord)
+        {
+            
+            await _dbContext.SaveChangesAsync();
         }
     }
 }

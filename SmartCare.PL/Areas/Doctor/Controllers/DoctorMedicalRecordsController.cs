@@ -20,7 +20,7 @@ namespace SmartCare.PL.Areas.Doctor.Controllers
             _doctorMedicalRecordservices = doctorMedicalRecordservices;
         }
         [HttpPost("CreateMedicalRecord/{appointmentId}")]
-        public async Task<IActionResult> CreateMedicalRecord([FromRoute]string appointmentId , MedicalRecordRequist medicalRecordRequist)
+        public async Task<IActionResult> CreateMedicalRecord([FromRoute]string appointmentId ,[FromBody] MedicalRecordRequist medicalRecordRequist)
         {
             var doctorId = User.FindFirstValue(ClaimTypes.NameIdentifier);
            await _doctorMedicalRecordservices.CreateMedicalRecord(doctorId, appointmentId , medicalRecordRequist);
@@ -39,6 +39,21 @@ namespace SmartCare.PL.Areas.Doctor.Controllers
             var doctorId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var result = await _doctorMedicalRecordservices.GetAllMedicalRecordsAsync(doctorId);
             return Ok(result);
+        }
+        [HttpPut("UpdateMedicalRecord/{appointmentId}")]
+        public async Task<IActionResult> UpdateMedicalRecord([FromRoute] string appointmentId,[FromBody] MedicalRecordRequist medicalRecordRequist)
+        {
+            var doctorId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            await _doctorMedicalRecordservices.UpdateMedicalRecordAsync(doctorId, appointmentId, medicalRecordRequist);
+            return Ok(new { message = "MedicalRecord Updated Successfully" });
+        }
+        [HttpDelete("DeleteMedicalRecord/{appointmentId}")]
+        public async Task<IActionResult> DeleteMedicalRecord([FromRoute] string appointmentId)
+        {
+            var doctorId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            // Assuming you have a method to delete the medical record in your service
+            await _doctorMedicalRecordservices.DeleteMedicalRecordAsync(doctorId, appointmentId);
+            return Ok(new { message = "MedicalRecord Deleted Successfully" });
         }
     }
 }

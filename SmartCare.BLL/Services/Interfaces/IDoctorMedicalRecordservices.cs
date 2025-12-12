@@ -12,7 +12,9 @@ namespace SmartCare.BLL.Services.Interfaces
     public interface IDoctorMedicalRecordservices
     {
         Task CreateMedicalRecord(string doctorId, string appointmentId , MedicalRecordRequist medicalRecordRequist);
+        Task UpdateMedicalRecordAsync(string doctorId, string appointmentId, MedicalRecordRequist medicalRecordRequist);
         Task<MedicalRecordResponse> GetMedicalRecordByAppointmentIdAsync(string doctorId, string appointmentId);
         Task<List<MedicalRecordResponse>> GetAllMedicalRecordsAsync(string doctorId);
+       Task<bool> DeleteMedicalRecordAsync(string doctorId, string appointmentId);
     }
 }
