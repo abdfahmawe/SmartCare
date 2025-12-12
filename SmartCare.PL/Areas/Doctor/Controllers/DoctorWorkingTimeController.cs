@@ -33,21 +33,21 @@ namespace SmartCare.PL.Areas.Doctor.Controllers
         {
             var doctorId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             await _doctorWorkingTimeService.SetWorkingHoursAsync(doctorId , requist);
-            return Ok();
+            return Ok(new {message="working time added successfuly"});
         }
         [HttpPut("UpdateWorkingHours")]
         public async Task<ActionResult<string>> UpdateWorkingHours([FromBody]DoctorWorkingTimeRequist requist)
         {
             var doctorId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            var result = await _doctorWorkingTimeService.UpdateWorkingTimeAsync(doctorId , requist);
-            return Ok(result);
+             await _doctorWorkingTimeService.UpdateWorkingTimeAsync(doctorId , requist);
+            return Ok(new {message = "Updated Successfuly"});
         }
         [HttpDelete("DeleteWorkingTime")]
         public async Task<ActionResult<string>> DeleteWorkingTime([FromBody] DeleteWorkingTimeRequist Day)
         {
             var doctorId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            var result = await _doctorWorkingTimeService.DeleteWorkingTimeAsync(doctorId , Day);
-            return Ok(result);
+           await _doctorWorkingTimeService.DeleteWorkingTimeAsync(doctorId , Day);
+            return Ok(new {message = "DeletedSuccessfuly"});
         }
     }
 }

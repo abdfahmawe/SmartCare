@@ -11,9 +11,9 @@ namespace SmartCare.BLL.Services.Interfaces
 {
     public interface IDoctorWorkingTimeService
     {
-        public Task<WorkingTime> SetWorkingHoursAsync(string doctorId, DoctorWorkingTimeRequist workingTimeRequist);
-        public Task<string> UpdateWorkingTimeAsync(string doctorId, DoctorWorkingTimeRequist requist);
-        public Task<string> DeleteWorkingTimeAsync(string doctorId, DeleteWorkingTimeRequist dayOfWeek);
+        public Task SetWorkingHoursAsync(string doctorId, DoctorWorkingTimeRequist workingTimeRequist);
+        public Task UpdateWorkingTimeAsync(string doctorId, DoctorWorkingTimeRequist requist);
+        public Task DeleteWorkingTimeAsync(string doctorId, DeleteWorkingTimeRequist day);
         public Task<List<WorkingTimeResponse>> GetWorkingHoursAsync(string doctorId);
 
 

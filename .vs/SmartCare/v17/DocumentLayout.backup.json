@@ -3,31 +3,31 @@
   "WorkspaceRootPath": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.dal\\repositries\\classes\\doctormedicalrecordrepositry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|solutionrelative:smartcare.dal\\repositries\\classes\\doctormedicalrecordrepositry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.dal\\repositries\\classes\\doctorworkingtimerepositry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|solutionrelative:smartcare.dal\\repositries\\classes\\doctorworkingtimerepositry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{44A6F172-DAEE-4335-AA01-7C8ADD5BE78B}|SmartCare.BLL\\SmartCare.BLL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.bll\\services\\classes\\doctormedicalrecordservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{44A6F172-DAEE-4335-AA01-7C8ADD5BE78B}|SmartCare.BLL\\SmartCare.BLL.csproj|solutionrelative:smartcare.bll\\services\\classes\\doctormedicalrecordservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{44A6F172-DAEE-4335-AA01-7C8ADD5BE78B}|SmartCare.BLL\\SmartCare.BLL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.bll\\services\\classes\\doctorworkingtimeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44A6F172-DAEE-4335-AA01-7C8ADD5BE78B}|SmartCare.BLL\\SmartCare.BLL.csproj|solutionrelative:smartcare.bll\\services\\classes\\doctorworkingtimeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB1A0FB-6F88-4C25-96B6-75E1D7628E28}|SmartCare.PL\\SmartCare.PL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.pl\\areas\\doctor\\controllers\\doctormedicalrecordscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FB1A0FB-6F88-4C25-96B6-75E1D7628E28}|SmartCare.PL\\SmartCare.PL.csproj|solutionrelative:smartcare.pl\\areas\\doctor\\controllers\\doctormedicalrecordscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.dal\\repositries\\interfaces\\idoctormedicalrecordrepositry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|solutionrelative:smartcare.dal\\repositries\\interfaces\\idoctormedicalrecordrepositry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.dal\\dto\\responses\\medicalrecordresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|solutionrelative:smartcare.dal\\dto\\responses\\medicalrecordresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44A6F172-DAEE-4335-AA01-7C8ADD5BE78B}|SmartCare.BLL\\SmartCare.BLL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.bll\\services\\interfaces\\idoctormedicalrecordservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{44A6F172-DAEE-4335-AA01-7C8ADD5BE78B}|SmartCare.BLL\\SmartCare.BLL.csproj|solutionrelative:smartcare.bll\\services\\interfaces\\idoctormedicalrecordservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7FB1A0FB-6F88-4C25-96B6-75E1D7628E28}|SmartCare.PL\\SmartCare.PL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.pl\\areas\\doctor\\controllers\\doctorworkingtimecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FB1A0FB-6F88-4C25-96B6-75E1D7628E28}|SmartCare.PL\\SmartCare.PL.csproj|solutionrelative:smartcare.pl\\areas\\doctor\\controllers\\doctorworkingtimecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/./SmartCare/True/SqlTable/dbo.Appointments.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.dal\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|solutionrelative:smartcare.dal\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44A6F172-DAEE-4335-AA01-7C8ADD5BE78B}|SmartCare.BLL\\SmartCare.BLL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.bll\\services\\interfaces\\idoctorworkingtimeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44A6F172-DAEE-4335-AA01-7C8ADD5BE78B}|SmartCare.BLL\\SmartCare.BLL.csproj|solutionrelative:smartcare.bll\\services\\interfaces\\idoctorworkingtimeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|c:\\users\\hp\\documents\\asp11\\api\\projects\\smartcare\\smartcare\\smartcare.dal\\repositries\\interfaces\\idoctorworkingtimerepositry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7391CB5-390E-427B-B66E-140965052CE9}|SmartCare.DAL\\SmartCare.DAL.csproj|solutionrelative:smartcare.dal\\repositries\\interfaces\\idoctorworkingtimerepositry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -37,92 +37,94 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MedicalRecordResponse.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\DTO\\Responses\\MedicalRecordResponse.cs",
-              "RelativeDocumentMoniker": "SmartCare.DAL\\DTO\\Responses\\MedicalRecordResponse.cs",
-              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\DTO\\Responses\\MedicalRecordResponse.cs",
-              "RelativeToolTip": "SmartCare.DAL\\DTO\\Responses\\MedicalRecordResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T11:36:10.369Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "dbo.Appointments.sql",
+              "DocumentIndex": 3,
+              "Title": "dbo.Appointments [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/./SmartCare/True/SqlTable/dbo.Appointments.sql",
-              "ToolTip": "ViewDataWindow_MSSQL__/./SmartCare/True/SqlTable/dbo.Appointments.sql",
+              "ToolTip": "dbo.Appointments [Data]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-12-10T19:22:20.508Z"
+              "WhenOpened": "2025-12-12T19:09:15.763Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "DoctorMedicalRecordsController.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.PL\\Areas\\Doctor\\Controllers\\DoctorMedicalRecordsController.cs",
-              "RelativeDocumentMoniker": "SmartCare.PL\\Areas\\Doctor\\Controllers\\DoctorMedicalRecordsController.cs",
-              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.PL\\Areas\\Doctor\\Controllers\\DoctorMedicalRecordsController.cs",
-              "RelativeToolTip": "SmartCare.PL\\Areas\\Doctor\\Controllers\\DoctorMedicalRecordsController.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAAACUAAAAJAAAAAAAAAA==",
+              "Title": "DoctorWorkingTimeController.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.PL\\Areas\\Doctor\\Controllers\\DoctorWorkingTimeController.cs",
+              "RelativeDocumentMoniker": "SmartCare.PL\\Areas\\Doctor\\Controllers\\DoctorWorkingTimeController.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.PL\\Areas\\Doctor\\Controllers\\DoctorWorkingTimeController.cs",
+              "RelativeToolTip": "SmartCare.PL\\Areas\\Doctor\\Controllers\\DoctorWorkingTimeController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAgwCgAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T14:03:46.512Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IDoctorMedicalRecordRepositry.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\Repositries\\Interfaces\\IDoctorMedicalRecordRepositry.cs",
-              "RelativeDocumentMoniker": "SmartCare.DAL\\Repositries\\Interfaces\\IDoctorMedicalRecordRepositry.cs",
-              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\Repositries\\Interfaces\\IDoctorMedicalRecordRepositry.cs",
-              "RelativeToolTip": "SmartCare.DAL\\Repositries\\Interfaces\\IDoctorMedicalRecordRepositry.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T08:05:01.939Z",
+              "WhenOpened": "2025-12-12T17:45:48.543Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "IDoctorMedicalRecordservices.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.BLL\\Services\\Interfaces\\IDoctorMedicalRecordservices.cs",
-              "RelativeDocumentMoniker": "SmartCare.BLL\\Services\\Interfaces\\IDoctorMedicalRecordservices.cs",
-              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.BLL\\Services\\Interfaces\\IDoctorMedicalRecordservices.cs",
-              "RelativeToolTip": "SmartCare.BLL\\Services\\Interfaces\\IDoctorMedicalRecordservices.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAxAAAAAAAAAA==",
+              "Title": "IDoctorWorkingTimeService.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.BLL\\Services\\Interfaces\\IDoctorWorkingTimeService.cs",
+              "RelativeDocumentMoniker": "SmartCare.BLL\\Services\\Interfaces\\IDoctorWorkingTimeService.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.BLL\\Services\\Interfaces\\IDoctorWorkingTimeService.cs",
+              "RelativeToolTip": "SmartCare.BLL\\Services\\Interfaces\\IDoctorWorkingTimeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-10T19:01:21.357Z"
+              "WhenOpened": "2025-12-12T18:42:06.351Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DoctorMedicalRecordservices.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.BLL\\Services\\Classes\\DoctorMedicalRecordservices.cs",
-              "RelativeDocumentMoniker": "SmartCare.BLL\\Services\\Classes\\DoctorMedicalRecordservices.cs",
-              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.BLL\\Services\\Classes\\DoctorMedicalRecordservices.cs",
-              "RelativeToolTip": "SmartCare.BLL\\Services\\Classes\\DoctorMedicalRecordservices.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAADMAAABYAAAAAAAAAA==",
+              "Title": "DoctorWorkingTimeService.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.BLL\\Services\\Classes\\DoctorWorkingTimeService.cs",
+              "RelativeDocumentMoniker": "SmartCare.BLL\\Services\\Classes\\DoctorWorkingTimeService.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.BLL\\Services\\Classes\\DoctorWorkingTimeService.cs",
+              "RelativeToolTip": "SmartCare.BLL\\Services\\Classes\\DoctorWorkingTimeService.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAvwFcAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T14:08:10.546Z",
+              "WhenOpened": "2025-12-12T08:07:29.962Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Appointment.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\Models\\Appointment.cs",
+              "RelativeDocumentMoniker": "SmartCare.DAL\\Models\\Appointment.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\Models\\Appointment.cs",
+              "RelativeToolTip": "SmartCare.DAL\\Models\\Appointment.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA9wBcAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T08:37:09.3Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DoctorMedicalRecordRepositry.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\Repositries\\Classes\\DoctorMedicalRecordRepositry.cs",
-              "RelativeDocumentMoniker": "SmartCare.DAL\\Repositries\\Classes\\DoctorMedicalRecordRepositry.cs",
-              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\Repositries\\Classes\\DoctorMedicalRecordRepositry.cs",
-              "RelativeToolTip": "SmartCare.DAL\\Repositries\\Classes\\DoctorMedicalRecordRepositry.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAowB8AAABaAAAAAAAAAA==",
+              "Title": "DoctorWorkingTimeRepositry.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\Repositries\\Classes\\DoctorWorkingTimeRepositry.cs",
+              "RelativeDocumentMoniker": "SmartCare.DAL\\Repositries\\Classes\\DoctorWorkingTimeRepositry.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\Repositries\\Classes\\DoctorWorkingTimeRepositry.cs",
+              "RelativeToolTip": "SmartCare.DAL\\Repositries\\Classes\\DoctorWorkingTimeRepositry.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAiwBkAAABdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T14:13:27.334Z",
+              "WhenOpened": "2025-12-12T08:07:50.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IDoctorWorkingTimeRepositry.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\Repositries\\Interfaces\\IDoctorWorkingTimeRepositry.cs",
+              "RelativeDocumentMoniker": "SmartCare.DAL\\Repositries\\Interfaces\\IDoctorWorkingTimeRepositry.cs",
+              "ToolTip": "C:\\Users\\hp\\Documents\\asp11\\API\\Projects\\SmartCare\\SmartCare\\SmartCare.DAL\\Repositries\\Interfaces\\IDoctorWorkingTimeRepositry.cs",
+              "RelativeToolTip": "SmartCare.DAL\\Repositries\\Interfaces\\IDoctorWorkingTimeRepositry.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T17:58:32.992Z",
               "EditorCaption": ""
             }
           ]

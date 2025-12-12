@@ -1,4 +1,6 @@
-﻿using SmartCare.BLL.Services.Interfaces;
+﻿using Azure.Core;
+using Microsoft.EntityFrameworkCore;
+using SmartCare.BLL.Services.Interfaces;
 using SmartCare.DAL.DTO.Requists;
 using SmartCare.DAL.DTO.Responses;
 using SmartCare.DAL.Models;
@@ -22,7 +24,7 @@ namespace SmartCare.BLL.Services.Classes
         }
         public async Task<List<WorkingTimeResponse>> GetWorkingHoursAsync(string doctorId)
         {
-            var workingHours = await _doctorWorkingTimeRepositry.GetWorkingTimeAsync(doctorId);
+            var workingHours = await _doctorWorkingTimeRepositry.GetWorkingTimesAsync(doctorId);
             var response = new List<WorkingTimeResponse>();
             foreach (var item in workingHours)
             {
@@ -38,14 +40,28 @@ namespace SmartCare.BLL.Services.Classes
         }
 
 
-        public async Task<string> DeleteWorkingTimeAsync(string doctorId, DeleteWorkingTimeRequist dayOfWeek)
+        public async Task DeleteWorkingTimeAsync(string doctorId, DeleteWorkingTimeRequist day)
         {
-            var result = await _doctorWorkingTimeRepositry.DeleteWorkingTimeAsync(doctorId, dayOfWeek);
-            return result;
+            var exist = await _doctorWorkingTimeRepositry.GetWorkingTimeAsync(doctorId ,day.Day);
+            if(exist is null)
+            {
+                throw new Exception("Working time for this doctor and day does not exist.");
+            }
+            var hasFutureAppointments = await _doctorWorkingTimeRepositry.HasFutureAppointmentsAsync(doctorId, day.Day);
+            if(hasFutureAppointments)
+            {
+                throw new Exception("Cannot delete working time because there are future appointments scheduled on this day.");
+            }
+          await _doctorWorkingTimeRepositry.DeleteWorkingTimeAsync(exist);
         }
 
-        public async Task<WorkingTime> SetWorkingHoursAsync(string doctorId, DoctorWorkingTimeRequist workingTimeRequist)
+        public async Task SetWorkingHoursAsync(string doctorId, DoctorWorkingTimeRequist workingTimeRequist)
         {
+            var exist = await _doctorWorkingTimeRepositry.GetWorkingTimeAsync(doctorId , workingTimeRequist.Day);
+            if(exist is not null)
+            {
+                throw new Exception("Working time for this doctor and day already exists.");
+            }
             var workingTime = new WorkingTime
             {
                 Day = workingTimeRequist.Day,
@@ -53,17 +69,28 @@ namespace SmartCare.BLL.Services.Classes
                 EndTime = workingTimeRequist.EndTime,
                 DoctorId = doctorId
             };
-            var result = await _doctorWorkingTimeRepositry.SetWorkingTimeAsync(workingTime);
-            return result; 
+           
+             await _doctorWorkingTimeRepositry.AddWorkingTimeAsync(workingTime);
+       
+
         }
 
-        public async Task<string> UpdateWorkingTimeAsync(string doctorId, DoctorWorkingTimeRequist requist)
+        public async Task UpdateWorkingTimeAsync(string doctorId, DoctorWorkingTimeRequist requist)
         {
-          
-            var result =  await _doctorWorkingTimeRepositry.UpdateWorkingTimeAsync( doctorId , requist);
-            return result;
+            var exist = await _doctorWorkingTimeRepositry.GetWorkingTimeAsync(doctorId, requist.Day);
+            if (exist is null)
+            {
+                throw new Exception("Working time for this doctor and day does not exist.");
+            }
+            var hasFutureAppointment = await _doctorWorkingTimeRepositry.hasFutureConflictingAppointments(doctorId, requist);
+            if (hasFutureAppointment)
+            {
+                throw new Exception("Cannot update working time because there are future appointments scheduled on this day.");
+            }
+            exist.StartTime = requist.StartTime;
+            exist.EndTime = requist.EndTime;
+            await _doctorWorkingTimeRepositry.UpdateWorkingTimeAsync(exist);
         }
 
-        
     }
 }

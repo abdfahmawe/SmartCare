@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SmartCare.PL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8bf108e9f38f3dc9bc6f9f6a526a0ee6402a8095")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f0e0a0e9e3a0a8815780400051ae76749d998c8c")]
 [assembly: System.Reflection.AssemblyProductAttribute("SmartCare.PL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SmartCare.PL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

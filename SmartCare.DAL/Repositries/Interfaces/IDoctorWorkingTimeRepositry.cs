@@ -10,9 +10,14 @@ namespace SmartCare.DAL.Repositries.Interfaces
 {
    public interface IDoctorWorkingTimeRepositry
     {
-        public Task<WorkingTime> SetWorkingTimeAsync(WorkingTime workingTime);
-        public Task<string> UpdateWorkingTimeAsync(string doctorId, DoctorWorkingTimeRequist requist);
-        public Task<string> DeleteWorkingTimeAsync(string doctorId, DeleteWorkingTimeRequist dayOfWeek);
-        Task<List<WorkingTime>> GetWorkingTimeAsync(string doctorId);
+        
+        public Task DeleteWorkingTimeAsync(WorkingTime workingTime);
+        public Task<List<WorkingTime>> GetWorkingTimesAsync(string doctorId);
+        public Task<WorkingTime?> GetWorkingTimeAsync(string doctorId, DayOfWeek day);
+        public  Task<bool> HasFutureAppointmentsAsync(string doctorId, DayOfWeek day);
+        public Task AddWorkingTimeAsync(WorkingTime workingTime);
+        public Task UpdateWorkingTimeAsync(WorkingTime workingTime);
+        public Task<bool> hasFutureConflictingAppointments(string doctorID , DoctorWorkingTimeRequist requist);
+
     }
 }
