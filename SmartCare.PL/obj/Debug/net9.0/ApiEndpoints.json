@@ -126,6 +126,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "SmartCare.PL.Areas.Doctor.Controllers.DoctorPrescriptionsController",
+    "Method": "GetAllPrescriptionsByAppointmentId",
+    "RelativePath": "api/Doctor/DoctorPrescriptions/GetAllPrescriptionsByAppointmentId/{appointmentId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "appointmentId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartCare.PL.Areas.Doctor.Controllers.DoctorPrescriptionsController",
+    "Method": "GetAllPrescriptions",
+    "RelativePath": "api/Doctor/DoctorPrescriptions/GetAllPrescriptionsByDoctorId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "SmartCare.PL.Areas.Doctor.Controllers.DoctorsController",
     "Method": "GetProfile",
     "RelativePath": "api/Doctor/Doctors/Profile",

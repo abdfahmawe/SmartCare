@@ -4,19 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmartCare.DAL.Models
+namespace SmartCare.DAL.DTO.Responses
 {
-  public  class Prescription // روشتة
+    public class PrescriptionResponse
     {
-        public string Id { get; set; } = Guid.NewGuid().ToString();
+        public string Id { get; set; }
         public string MedicineName { get; set; }     // اسم الدواء => Acamol
         public string Dosage { get; set; }           // الجرعة => for example "500mg"
         public string Frequency { get; set; }        // عدد المرات يوميًا => for example "3 times a day"
         public int DurationDays { get; set; }        // عدد الأيام => for example 7
         public string? Instructions { get; set; }      // تعليمات => for example "Take after meals"
-
-        //   ==============================================
         public string AppointmentId { get; set; }
-        public Appointment Appointment { get; set; }
+
     }
 }
