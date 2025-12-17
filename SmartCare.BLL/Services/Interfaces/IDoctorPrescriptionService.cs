@@ -1,4 +1,5 @@
-﻿using SmartCare.DAL.DTO.Responses;
+﻿using SmartCare.DAL.DTO.Requists;
+using SmartCare.DAL.DTO.Responses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +12,8 @@ namespace SmartCare.BLL.Services.Interfaces
     {
         Task<List<PrescriptionResponse>> GetPrescriptionsAsync(string doctorID);
         Task<List<PrescriptionResponse>> GetPrescriptionsByAppointmentIdAsync(string doctorId, string appointmentId);
+        Task<PrescriptionResponse> CreatePrescriptionAsync(string doctorId, CreatePrescriptionRequist createPrescriptionRequist);
+        Task UpdatePrescriptionAsync(string doctorId, string PrescriptionId, UpdatePrescriptionRequist updatePrescriptionRequist);
+        Task DeletePrescriptionAsync(string doctorId, string PrescriptionId);
     }
 }

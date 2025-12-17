@@ -13,5 +13,12 @@ namespace SmartCare.DAL.Repositries.Interfaces
         Task<bool> AppointmentBelongsToDoctor(string AppointmentId, string DoctorID);
         Task<bool> AppointmentAvalible(string AppointmentId);
         public Task<List<Prescription>> GetAllPrescriptionsByAppointmentId(string doctorId, string appointmentId);
+        Task CreateAsync(Prescription prescription);
+        // Update
+        Task<Prescription?> GetPrescriptionAsync(string PrescriptionId);
+        Task UpdateAsync(Prescription prescription);
+        //Delete 
+        Task<bool> PrescriptionBelongsToDoctor(string DoctorId, string PrescriptionID);
+        Task DeleteAsync(Prescription prescription);
     }
 }

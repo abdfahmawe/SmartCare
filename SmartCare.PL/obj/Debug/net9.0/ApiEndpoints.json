@@ -127,8 +127,18 @@
   },
   {
     "ContainingType": "SmartCare.PL.Areas.Doctor.Controllers.DoctorPrescriptionsController",
+    "Method": "GetAllPrescriptions",
+    "RelativePath": "api/Doctor/DoctorPrescriptions/AllPrescriptionsByDoctorId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartCare.PL.Areas.Doctor.Controllers.DoctorPrescriptionsController",
     "Method": "GetAllPrescriptionsByAppointmentId",
-    "RelativePath": "api/Doctor/DoctorPrescriptions/GetAllPrescriptionsByAppointmentId/{appointmentId}",
+    "RelativePath": "api/Doctor/DoctorPrescriptions/AllPrescriptionsByDoctorIdAndAppointmentId/{appointmentId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -143,12 +153,55 @@
   },
   {
     "ContainingType": "SmartCare.PL.Areas.Doctor.Controllers.DoctorPrescriptionsController",
-    "Method": "GetAllPrescriptions",
-    "RelativePath": "api/Doctor/DoctorPrescriptions/GetAllPrescriptionsByDoctorId",
-    "HttpMethod": "GET",
+    "Method": "CreatePrescription",
+    "RelativePath": "api/Doctor/DoctorPrescriptions/CreatePrescription",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "createPrescriptionRequist",
+        "Type": "SmartCare.DAL.DTO.Requists.CreatePrescriptionRequist",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartCare.PL.Areas.Doctor.Controllers.DoctorPrescriptionsController",
+    "Method": "DeletePrescription",
+    "RelativePath": "api/Doctor/DoctorPrescriptions/DeletePrescription/{prescriptionId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "prescriptionId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartCare.PL.Areas.Doctor.Controllers.DoctorPrescriptionsController",
+    "Method": "UpdatePrescription",
+    "RelativePath": "api/Doctor/DoctorPrescriptions/UpdatePrescription/{prescriptionId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "prescriptionId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "requist",
+        "Type": "SmartCare.DAL.DTO.Requists.UpdatePrescriptionRequist",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {

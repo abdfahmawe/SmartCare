@@ -38,5 +38,29 @@ namespace SmartCare.DAL.Repositries.Classes
         {
             return await _dbContext.Appointments.AnyAsync(a=>a.Id == AppointmentId);
         }
+        public async Task CreateAsync(Prescription prescription)
+        {
+            await _dbContext.Prescriptions.AddAsync(prescription);
+            await _dbContext.SaveChangesAsync();
+        }
+        public async Task<Prescription?> GetPrescriptionAsync(string PrescriptionId)
+        {
+            return await _dbContext.Prescriptions.FirstOrDefaultAsync(p=>p.Id == PrescriptionId);
+        }
+        public async Task UpdateAsync(Prescription prescription)
+        {
+            
+            await _dbContext.SaveChangesAsync();
+
+        }
+        public async Task<bool> PrescriptionBelongsToDoctor(string DoctorId , string PrescriptionID)
+        {
+            return await _dbContext.Prescriptions.AnyAsync(p=>p.Id == PrescriptionID && p.Appointment.DoctorId == DoctorId);
+        }
+        public async Task DeleteAsync(Prescription prescription)
+        {
+            _dbContext.Remove(prescription);
+            await _dbContext.SaveChangesAsync();
+        }
     }
 }
