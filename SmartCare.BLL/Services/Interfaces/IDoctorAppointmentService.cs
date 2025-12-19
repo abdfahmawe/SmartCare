@@ -12,6 +12,6 @@ namespace SmartCare.BLL.Services.Interfaces
     {
         Task<List<DoctorAppointmentResponseDTO>> GetAllAppointmentsAsync(string doctorId , bool onlySchedueld=true);
         Task<Appointment> CompleteAppointmentAsync(string doctorId , string AppointmentID);
-
+        Task<List<DoctorAppointmentResponseDTO>> GetTodayAppointmentsAsync(string doctorId);
     }
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Mapster;
+using Microsoft.EntityFrameworkCore;
 using SmartCare.BLL.Services.Interfaces;
 using SmartCare.DAL.Data;
 using SmartCare.DAL.DTO.Responses;
@@ -39,6 +40,14 @@ namespace SmartCare.BLL.Services.Classes
                 StartAt = a.StartAt,
                 EndAt = a.EndAt,
             }).ToList();
+            return response;
+        }
+        public async Task<List<DoctorAppointmentResponseDTO>> GetTodayAppointmentsAsync(string doctorId)
+        {
+            var allAppoitnemts = await _doctorAppointmentRepository.GetAll(doctorId,false);
+            var todayDate = DateTime.Now.Date;
+            var todayAppointments = allAppoitnemts.Where(a => a.StartAt.Date == todayDate).ToList();
+            var response = todayAppointments.Adapt<List<DoctorAppointmentResponseDTO>>();
             return response;
         }
     }

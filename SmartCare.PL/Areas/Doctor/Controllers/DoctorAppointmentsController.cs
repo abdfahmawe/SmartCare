@@ -34,5 +34,12 @@ namespace SmartCare.PL.Areas.Doctor.Controllers
             // Implementation for completing the appointment goes here
             return Ok(new { message = "Appointment completed Successfuly"});
         }
+        [HttpGet("GetTodayAppointments")]
+        public async Task<IActionResult> GetTodayAppointments()
+        {
+            var doctorId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var result = await _doctorAppointmentService.GetTodayAppointmentsAsync(doctorId);
+            return Ok(new { message ="Today Appointments are" ,result });
+        }
     }
 }

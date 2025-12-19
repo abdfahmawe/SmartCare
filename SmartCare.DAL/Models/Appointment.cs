@@ -8,10 +8,10 @@ namespace SmartCare.DAL.Models
 {
    public enum AppointmentStatus
     {
-        Scheduled,
-        Completed,
-        Canceled,
-        NoShow
+        Scheduled,//0
+        Completed,//1
+        Canceled,//2
+        NoShow//3
     }
     public class Appointment 
     {

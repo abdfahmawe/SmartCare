@@ -42,6 +42,16 @@
     ]
   },
   {
+    "ContainingType": "SmartCare.PL.Areas.Doctor.Controllers.DoctorAppointmentsController",
+    "Method": "GetTodayAppointments",
+    "RelativePath": "api/Doctor/DoctorAppointments/GetTodayAppointments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "SmartCare.PL.Areas.Doctor.Controllers.DoctorMedicalRecordsController",
     "Method": "CreateMedicalRecord",
     "RelativePath": "api/Doctor/DoctorMedicalRecords/CreateMedicalRecord/{appointmentId}",
