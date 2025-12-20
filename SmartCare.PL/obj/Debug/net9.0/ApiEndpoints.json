@@ -1,5 +1,73 @@
 [
   {
+    "ContainingType": "SmartCare.PL.Areas.Admin.Controllers.InvoicesController",
+    "Method": "GenerateInvoice",
+    "RelativePath": "api/Admin/Invoices/GenerateInvoice/{appointmentId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "appointmentId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "createInvoice",
+        "Type": "SmartCare.DAL.DTO.Requists.CreateInvoiceRequist",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartCare.PL.Areas.Admin.Controllers.InvoicesController",
+    "Method": "GetAllInvoices",
+    "RelativePath": "api/Admin/Invoices/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartCare.PL.Areas.Admin.Controllers.InvoicesController",
+    "Method": "GetInvoiceByAppointmentId",
+    "RelativePath": "api/Admin/Invoices/GetInvoiceByAppointmentId/{appointmentId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "appointmentId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartCare.PL.Areas.Admin.Controllers.InvoicesController",
+    "Method": "MarkAsPaid",
+    "RelativePath": "api/Admin/Invoices/MarkAsPaid/{invoiceId}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "invoiceId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "requist",
+        "Type": "SmartCare.DAL.DTO.Requists.MarkAsPaidInvoiceRequist",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "SmartCare.PL.Areas.Doctor.Controllers.DoctorAppointmentsController",
     "Method": "CompleteAppointment",
     "RelativePath": "api/Doctor/DoctorAppointments/CompleteAppointment/{appointmentId}",

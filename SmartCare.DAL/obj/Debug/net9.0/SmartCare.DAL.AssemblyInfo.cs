@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SmartCare.DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+36658430bacced31dfb3bd7ea0c0f4896c43084d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c0ba550634aa666ff74a6e43517782088ffbd11")]
 [assembly: System.Reflection.AssemblyProductAttribute("SmartCare.DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SmartCare.DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

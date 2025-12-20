@@ -230,10 +230,13 @@ namespace SmartCare.DAL.Migrations
                     b.Property<DateTime>("IssuedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<DateTime?>("PaidAt")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("PaymentStatus")
                         .HasColumnType("int");
 
-                    b.Property<int>("PaymentWay")
+                    b.Property<int?>("PaymentWay")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -337,7 +340,6 @@ namespace SmartCare.DAL.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Instructions")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("MedicineName")
