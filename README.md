@@ -1,48 +1,61 @@
 # 🏥 SmartCare – Healthcare Management System
 
-SmartCare is a comprehensive Healthcare Management System developed using **ASP.NET Core 8**. The system simplifies healthcare operations by connecting **Patients**, **Doctors**, and **Administrators** through a secure and organized platform.
+SmartCare is a Healthcare Management System built with **ASP.NET Core 9 Web API** that streamlines communication between **Patients**, **Doctors**, and **Administrators** through a secure and scalable platform.
 
-It provides appointment scheduling, medical record management, prescriptions, invoices, authentication, and doctor working schedules using a clean layered architecture.
+The system provides authentication, appointment scheduling, medical records management, prescriptions, doctor working schedules, and invoice management while following a clean **Layered Architecture**.
+
+The project is designed to simplify healthcare workflows and provide a secure RESTful API for healthcare applications.
 
 ---
 
 # 🚀 Features
 
-## 👨‍⚕️ Doctor Portal
+## 👨‍⚕️ Doctor
 
-- View daily appointments
-- Manage patient appointments
-- Create and update medical records
-- Write prescriptions
-- Manage working schedule
-- View patient history
+- Manage personal profile
+- Set and update working hours
+- View scheduled appointments
+- View today's appointments
+- Complete appointments
+- Create medical records
+- Update medical records
+- Delete medical records
+- Create prescriptions
+- Update prescriptions
+- Delete prescriptions
+- View all created prescriptions
 
 ---
 
-## 🧑 Patient Portal
+## 🧑 Patient
 
-- Secure registration and login
+- Register and login
 - Book appointments
+- View available doctor schedules
 - View appointment history
+- Update personal profile
 - Access medical records
 - View prescriptions
 
 ---
 
-## 👨‍💼 Admin Portal
+## 👨‍💼 Admin
 
-- Manage invoices
-- Monitor healthcare operations
-- Administrative management tools
+- Generate invoices
+- View all invoices
+- Retrieve invoice details
+- Mark invoices as paid
 
 ---
 
-## 🔐 Authentication & Security
+## 🔐 Security
 
 - JWT Authentication
 - ASP.NET Identity
+- Email Confirmation
+- Password Reset
 - Role-Based Authorization
-- Protected API Endpoints
+- Protected Endpoints
 
 ---
 
@@ -53,126 +66,40 @@ It provides appointment scheduling, medical record management, prescriptions, in
 | ASP.NET Core 9 | Backend Framework |
 | C# | Programming Language |
 | SQL Server | Database |
-| Entity Framework Core | ORM |
-| ASP.NET Identity | User Management |
-| JWT | Authentication |
-| Layered Architecture | Project Structure |
+| Entity Framework Core 9 | ORM |
+| ASP.NET Identity | Identity Management |
+| JWT Bearer Authentication | Authentication |
+| Scalar OpenAPI | API Documentation |
+| Layered Architecture | Application Design Pattern |
 
 ---
 
-# 🏗️ Project Architecture
+# 🏗️ Architecture
 
-The project follows a **Layered Architecture** to ensure maintainability and scalability.
+The project follows a **Layered Architecture** to improve maintainability, scalability, and separation of concerns.
 
 ```
-Presentation Layer (PL)
-        │
-Business Logic Layer (BLL)
-        │
-Data Access Layer (DAL)
-        │
-SQL Server
+SmartCare
+│
+├── SmartCare.PL
+│      Presentation Layer
+│      Controllers
+│      Authentication
+│
+├── SmartCare.BLL
+│      Business Logic
+│      Services
+│      Interfaces
+│      Validation
+│
+├── SmartCare.DAL
+│      Database
+│      Models
+│      DTOs
+│      Repositories
+│
+└── SQL Server
 ```
-
----
-
-# 🗄️ Main Modules
-
-### 🔐 Identity
-
-- Login
-- Register
-- JWT Authentication
-- User Management
-
----
-
-### 👨‍⚕️ Doctors
-
-- Doctor Profile
-- Working Time Management
-- Appointments
-- Medical Records
-- Prescriptions
-
----
-
-### 🧑 Patients
-
-- Patient Profile
-- Appointment Booking
-- Medical History
-- Prescriptions
-
----
-
-### 📅 Appointments
-
-- Book Appointment
-- Cancel Appointment
-- View Upcoming Appointments
-- Appointment Status Management
-
----
-
-### 📋 Medical Records
-
-- Create Medical Record
-- Update Medical Record
-- View Patient History
-
----
-
-### 💊 Prescriptions
-
-- Create Prescription
-- View Prescriptions
-- Patient Prescription History
-
----
-
-### 💰 Invoices
-
-- Create Invoice
-- View Invoice Details
-- Invoice Management
-
----
-
-# 📡 API Modules
-
-## 🔐 Authentication
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | /api/Account/Register | Register new account |
-| POST | /api/Account/Login | User Login |
-
----
-
-## 👨‍⚕️ Doctor APIs
-
-- Doctor Profile
-- Working Time
-- Appointments
-- Medical Records
-- Prescriptions
-
----
-
-## 🧑 Patient APIs
-
-- Patient Profile
-- Appointment Booking
-- Appointment History
-- Medical Records
-
----
-
-## 👨‍💼 Admin APIs
-
-- Invoice Management
-- Administrative Operations
 
 ---
 
@@ -183,54 +110,131 @@ SmartCare
 │
 ├── SmartCare.PL
 │   ├── Areas
-│   │   ├── Identity
+│   │   ├── Admin
 │   │   ├── Doctor
 │   │   ├── Patient
-│   │   └── Admin
+│   │   └── Identity
+│   │
+│   ├── Program.cs
+│   └── appsettings.json
 │
 ├── SmartCare.BLL
 │   ├── Services
 │   ├── Interfaces
-│   ├── BackgroundJobs
-│   └── Exceptions
+│   ├── Exceptions
+│   ├── Validation
+│   └── Mapping
 │
 ├── SmartCare.DAL
 │   ├── Models
-│   ├── Repositories
+│   ├── DTO
 │   ├── Data
+│   ├── Repositories
 │   └── Migrations
 ```
 
 ---
 
-# 🛠️ Installation
+# 🗄️ Main Database Entities
 
-## Requirements
-
-- .NET 8 SDK
-- SQL Server
-- Visual Studio 2022
+- Users
+- Roles
+- Doctors
+- Patients
+- Appointments
+- MedicalRecords
+- Prescriptions
+- WorkingTimes
+- Invoices
 
 ---
 
-## Clone Repository
+# 🔑 User Roles
+
+The system uses **Role-Based Authorization**.
+
+### 👨‍💼 Admin
+
+Responsible for:
+
+- Invoice Management
+- Payment Operations
+
+---
+
+### 👨‍⚕️ Doctor
+
+Responsible for:
+
+- Working Hours
+- Appointments
+- Medical Records
+- Prescriptions
+- Profile Management
+
+---
+
+### 🧑 Patient
+
+Responsible for:
+
+- Appointment Booking
+- Profile Management
+- Viewing Medical Records
+- Viewing Prescriptions
+
+---
+
+# 🛠️ Installation & Setup
+
+## ✅ Prerequisites
+
+Before running the project make sure you have installed:
+
+- .NET 9 SDK
+- SQL Server
+- Visual Studio 2022
+- Git
+
+---
+
+## 📥 Clone Repository
 
 ```bash
 git clone https://github.com/abdfahmawe/SmartCare.git
+```
+
+Move into the project folder
+
+```bash
 cd SmartCare
 ```
 
 ---
 
-## Configure Database
+## ⚙️ Configure Database
 
-Update your connection string inside:
+Open
 
-```json
+```text
 appsettings.json
 ```
 
-Run migrations:
+Update your SQL Server connection string.
+
+Example
+
+```json
+"ConnectionStrings": {
+  "DefaultConnection": "Server=.;Database=SmartCareDB;Trusted_Connection=True;TrustServerCertificate=True;"
+}
+```
+
+---
+
+## 🗄️ Apply Database Migrations
+
+Run
 
 ```bash
 dotnet ef database update
@@ -238,68 +242,317 @@ dotnet ef database update
 
 ---
 
-## Run
+## ▶️ Run the Project
+
+Using Visual Studio:
+
+```
+Press F5
+```
+
+or
 
 ```bash
 dotnet run
 ```
 
-or simply press **F5** in Visual Studio.
+---
+
+# 🌐 Base URL
+
+After running the application
+
+```
+https://localhost:5001
+```
+
+or
+
+```
+https://localhost:{PORT}
+```
 
 ---
 
-# 🔑 User Roles
+# 🔐 Authentication
 
-### 👨‍💼 Admin
+The application uses
 
-- Manage invoices
-- Administrative operations
-
-### 👨‍⚕️ Doctor
-
-- Manage appointments
-- Create prescriptions
-- Update medical records
-- Manage working hours
-
-### 🧑 Patient
-
-- Book appointments
-- View prescriptions
-- Access medical records
-
----
-
-# 🔒 Authentication
-
-SmartCare secures all protected endpoints using:
-
-- ASP.NET Identity
 - JWT Bearer Authentication
+- ASP.NET Identity
 - Role-Based Authorization
 
+After logging in, every secured endpoint requires
+
+```
+Authorization: Bearer YOUR_JWT_TOKEN
+```
+
+Example
+
+```
+GET /api/Patient/Patient/Profile
+
+Authorization:
+Bearer eyJhbGciOi...
+```
+
 ---
 
-# 📈 Future Enhancements
+# 📡 API Endpoints 
+# 👨‍💼 Admin Endpoints
+
+The Admin is responsible for invoice management and payment operations.
+
+---
+
+## 📌 Invoice Management
+
+| Method | Endpoint | Description | Role |
+|--------|----------|-------------|------|
+| POST | `/api/Admin/Invoices/GenerateInvoice/{appointmentId}` | Generate a new invoice for a completed appointment | Admin |
+| GET | `/api/Admin/Invoices/GetAll` | Retrieve all invoices | Admin |
+| GET | `/api/Admin/Invoices/GetInvoiceByAppointmentId/{appointmentId}` | Retrieve invoice details using appointment ID | Admin |
+| PATCH | `/api/Admin/Invoices/MarkAsPaid/{invoiceId}` | Mark an invoice as paid | Admin |
+
+---
+
+# 👨‍⚕️ Doctor Endpoints
+
+The Doctor module allows healthcare providers to manage appointments, patient medical records, prescriptions, working schedules, and personal information.
+
+---
+
+## 📌 Doctor Profile
+
+| Method | Endpoint | Description | Role |
+|--------|----------|-------------|------|
+| GET | `/api/Doctor/Doctors/Profile` | Retrieve doctor's profile information | Doctor |
+| PATCH | `/api/Doctor/Doctors/UpdateProfile` | Update doctor's profile information | Doctor |
+
+---
+
+## 📌 Working Time Management
+
+| Method | Endpoint | Description | Role |
+|--------|----------|-------------|------|
+| GET | `/api/Doctor/DoctorWorkingTime/GetWorkingHours` | Retrieve doctor's working schedule | Doctor |
+| POST | `/api/Doctor/DoctorWorkingTime/SetWorkingHours` | Create doctor's working schedule | Doctor |
+| PUT | `/api/Doctor/DoctorWorkingTime/UpdateWorkingHours` | Update working schedule | Doctor |
+| DELETE | `/api/Doctor/DoctorWorkingTime/DeleteWorkingTime` | Delete working schedule | Doctor |
+
+---
+
+## 📌 Appointment Management
+
+| Method | Endpoint | Description | Role |
+|--------|----------|-------------|------|
+| GET | `/api/Doctor/DoctorAppointments/GetAllAppointmentOnlyScheduled` | Retrieve all scheduled appointments | Doctor |
+| GET | `/api/Doctor/DoctorAppointments/GetTodayAppointments` | Retrieve today's appointments | Doctor |
+| PATCH | `/api/Doctor/DoctorAppointments/CompleteAppointment/{appointmentId}` | Mark an appointment as completed | Doctor |
+
+---
+
+## 📌 Medical Record Management
+
+| Method | Endpoint | Description | Role |
+|--------|----------|-------------|------|
+| POST | `/api/Doctor/DoctorMedicalRecords/CreateMedicalRecord/{appointmentId}` | Create a medical record for an appointment | Doctor |
+| GET | `/api/Doctor/DoctorMedicalRecords/GetMedicalRecord/{appointmentId}` | Retrieve a medical record by appointment ID | Doctor |
+| GET | `/api/Doctor/DoctorMedicalRecords/GetAllMedicalRecords` | Retrieve all medical records created by the doctor | Doctor |
+| PUT | `/api/Doctor/DoctorMedicalRecords/UpdateMedicalRecord/{appointmentId}` | Update a medical record | Doctor |
+| DELETE | `/api/Doctor/DoctorMedicalRecords/DeleteMedicalRecord/{appointmentId}` | Delete a medical record | Doctor |
+
+---
+
+## 📌 Prescription Management
+
+| Method | Endpoint | Description | Role |
+|--------|----------|-------------|------|
+| GET | `/api/Doctor/DoctorPrescriptions/AllPrescriptionsByDoctorId` | Retrieve all prescriptions created by the doctor | Doctor |
+| GET | `/api/Doctor/DoctorPrescriptions/AllPrescriptionsByDoctorIdAndAppointmentId/{appointmentId}` | Retrieve prescriptions for a specific appointment | Doctor |
+| POST | `/api/Doctor/DoctorPrescriptions/CreatePrescription` | Create a new prescription | Doctor |
+| PUT | `/api/Doctor/DoctorPrescriptions/UpdatePrescription/{prescriptionId}` | Update an existing prescription | Doctor |
+| DELETE | `/api/Doctor/DoctorPrescriptions/DeletePrescription/{prescriptionId}` | Delete a prescription | Doctor |
+
+---
+
+## 🔒 Doctor Authorization
+
+All Doctor endpoints require:
+
+```
+Authorization: Bearer YOUR_JWT_TOKEN
+```
+
+Only authenticated users with the **Doctor** role can access these endpoints.
+
+Example:
+
+```http
+GET https://localhost:5001/api/Doctor/DoctorAppointments/GetTodayAppointments
+
+Authorization: Bearer YOUR_JWT_TOKEN
+```
+
+---
+
+## 🔒 Admin Authorization
+
+All Admin endpoints require:
+
+```
+Authorization: Bearer YOUR_JWT_TOKEN
+```
+
+Only authenticated users with the **Admin** role can access these endpoints.
+
+Example:
+
+```http
+GET https://localhost:5001/api/Admin/Invoices/GetAll
+
+Authorization: Bearer YOUR_JWT_TOKEN
+```
+# 🧑 Patient Endpoints
+
+The Patient module allows users to manage their profile, book appointments, and access their healthcare information.
+
+---
+
+## 📌 Patient Profile
+
+| Method | Endpoint | Description | Role |
+|--------|----------|-------------|------|
+| GET | `/api/Patient/Patient/Profile` | Retrieve patient profile information | Patient |
+| PATCH | `/api/Patient/Patient/UpdateProfile` | Update patient profile | Patient |
+| GET | `/api/Patient/Patient/MedicalRecords` | Retrieve all patient's medical records | Patient |
+| GET | `/api/Patient/Patient/Prescriptions` | Retrieve all patient's prescriptions | Patient |
+
+---
+
+## 📌 Appointment Booking
+
+| Method | Endpoint | Description | Role |
+|--------|----------|-------------|------|
+| GET | `/api/Patient/PatientAppointments/GetAllDoctorsWithIds` | Retrieve all available doctors | Patient |
+| GET | `/api/Patient/PatientAppointments/AvailableSlots?doctorId={doctorId}&date={date}` | Retrieve available appointment slots for a doctor | Patient |
+| GET | `/api/Patient/PatientAppointments/Appointments` | Retrieve patient's appointments | Patient |
+| POST | `/api/Patient/PatientAppointments/BookAppointment` | Book a new appointment | Patient |
+
+---
+
+## 🔒 Patient Authorization
+
+All Patient endpoints require:
+
+```
+Authorization: Bearer YOUR_JWT_TOKEN
+```
+
+Only authenticated users with the **Patient** role can access these endpoints.
+
+Example:
+
+```http
+GET https://localhost:5001/api/Patient/Patient/Profile
+
+Authorization: Bearer YOUR_JWT_TOKEN
+```
+
+---
+
+# 🔐 Authentication Endpoints
+
+Authentication is handled using **ASP.NET Identity** and **JWT Bearer Authentication**.
+
+---
+
+## 📌 Account Management
+
+| Method | Endpoint | Description | Access |
+|--------|----------|-------------|--------|
+| POST | `/api/Identity/Account/register` | Register a new patient account | Public |
+| POST | `/api/Identity/Account/login` | Login and receive JWT access token | Public |
+| GET | `/api/Identity/Account/ConfirmEmail` | Confirm email address | Public |
+| POST | `/api/Identity/Account/ResetPassword` | Reset forgotten password | Public |
+| POST | `/api/Identity/Account/ChangePassword` | Change current password | Authenticated |
+
+---
+
+# 📖 HTTP Response Codes
+
+The API returns standard HTTP status codes.
+
+| Code | Meaning |
+|------|---------|
+| 200 OK | Request completed successfully |
+| 201 Created | Resource created successfully |
+| 400 Bad Request | Invalid request data |
+| 401 Unauthorized | Authentication required |
+| 403 Forbidden | Access denied |
+| 404 Not Found | Requested resource was not found |
+| 409 Conflict | Resource conflict |
+| 500 Internal Server Error | Unexpected server error |
+
+---
+
+# 🧪 Testing the API
+
+You can test the API using:
+
+- Swagger / Scalar OpenAPI
+- Postman
+- Insomnia
+
+For protected endpoints:
+
+1. Register a new account.
+2. Login using your credentials.
+3. Copy the generated JWT token.
+4. Add the following header to every secured request:
+
+```
+Authorization: Bearer YOUR_JWT_TOKEN
+```
+
+---
+
+# 🚀 Future Improvements
 
 - Email Notifications
 - SMS Appointment Reminders
-- Online Payments
-- Medical Report PDF Export
-- Video Consultation
-- Dashboard Analytics
+- Online Payment Gateway Integration
+- PDF Invoice Export
+- Medical Reports Export
+- Doctor Dashboard
+- Admin Dashboard
+- Patient Dashboard
+- Real-Time Notifications
+- Video Consultation Support
+- Appointment Cancellation & Rescheduling
+- Multi-language Support
 
 ---
 
-# 👨‍💻 Developer
+# 👨‍💻 Author
 
 **Abd Al-Rahman Hamdan**
 
-Software Engineer
+Software Engineer | Backend Developer
 
 GitHub:
+
 https://github.com/abdfahmawe
+
+LinkedIn:
+
+https://www.linkedin.com/
 
 ---
 
-⭐ If you found this project useful, consider giving it a star!
+# ⭐ Support
+
+If you found this project useful, consider giving it a ⭐ on GitHub.
+
+Your support is greatly appreciated!
