@@ -1,128 +1,178 @@
 # 🏥 SmartCare – Healthcare Management System
 
-SmartCare is a Healthcare Management System built with **ASP.NET Core 8** that streamlines communication between patients, doctors, and administrators.
+SmartCare is a comprehensive Healthcare Management System developed using **ASP.NET Core 8**. The system simplifies healthcare operations by connecting **Patients**, **Doctors**, and **Administrators** through a secure and organized platform.
 
-The system provides secure authentication, appointment scheduling, medical records management, prescriptions, invoices, and doctor working schedules through a clean layered architecture.
+It provides appointment scheduling, medical record management, prescriptions, invoices, authentication, and doctor working schedules using a clean layered architecture.
 
 ---
 
 # 🚀 Features
 
-### 👨‍⚕️ Doctor
+## 👨‍⚕️ Doctor Portal
 
-- Manage appointments
-- View patient medical records
-- Create and manage prescriptions
-- Update working schedules
-- Manage patient consultations
+- View daily appointments
+- Manage patient appointments
+- Create and update medical records
+- Write prescriptions
+- Manage working schedule
+- View patient history
 
-### 🧑‍🤝‍🧑 Patient
+---
 
-- Register and login securely
+## 🧑 Patient Portal
+
+- Secure registration and login
 - Book appointments
 - View appointment history
 - Access medical records
 - View prescriptions
 
-### 👨‍💼 Admin
+---
+
+## 👨‍💼 Admin Portal
 
 - Manage invoices
-- Monitor system data
-- Administrative dashboard
+- Monitor healthcare operations
+- Administrative management tools
 
-### 🔐 Security
+---
+
+## 🔐 Authentication & Security
 
 - JWT Authentication
 - ASP.NET Identity
 - Role-Based Authorization
-- Secure API Endpoints
+- Protected API Endpoints
 
 ---
 
 # 🧠 Tech Stack
 
-- **Backend:** ASP.NET Core 8
-- **Language:** C#
-- **Database:** SQL Server
-- **ORM:** Entity Framework Core
-- **Authentication:** JWT + ASP.NET Identity
-- **API Documentation:** Scalar / OpenAPI
-- **Architecture:** Layered Architecture (Presentation, Business Logic, Data Access)
+| Technology | Description |
+|------------|-------------|
+| ASP.NET Core 9 | Backend Framework |
+| C# | Programming Language |
+| SQL Server | Database |
+| Entity Framework Core | ORM |
+| ASP.NET Identity | User Management |
+| JWT | Authentication |
+| Layered Architecture | Project Structure |
 
 ---
 
 # 🏗️ Project Architecture
 
-```
-SmartCare
-│
-├── SmartCare.PL        → Presentation Layer
-├── SmartCare.BLL       → Business Logic Layer
-├── SmartCare.DAL       → Data Access Layer
-```
+The project follows a **Layered Architecture** to ensure maintainability and scalability.
 
-The project follows a clean layered architecture separating:
-
-- Presentation Layer
-- Business Logic
-- Data Access
-- Services
-- Repositories
-- Models
+```
+Presentation Layer (PL)
+        │
+Business Logic Layer (BLL)
+        │
+Data Access Layer (DAL)
+        │
+SQL Server
+```
 
 ---
 
-# 🗄️ Database Models
+# 🗄️ Main Modules
 
-The system contains the following main entities:
+### 🔐 Identity
 
-- Users
-- Doctors
-- Patients
-- Departments
+- Login
+- Register
+- JWT Authentication
+- User Management
+
+---
+
+### 👨‍⚕️ Doctors
+
+- Doctor Profile
+- Working Time Management
 - Appointments
 - Medical Records
-- Medical Files
 - Prescriptions
-- Working Times
-- Invoices
 
 ---
 
-# 📡 Main Modules
+### 🧑 Patients
+
+- Patient Profile
+- Appointment Booking
+- Medical History
+- Prescriptions
+
+---
+
+### 📅 Appointments
+
+- Book Appointment
+- Cancel Appointment
+- View Upcoming Appointments
+- Appointment Status Management
+
+---
+
+### 📋 Medical Records
+
+- Create Medical Record
+- Update Medical Record
+- View Patient History
+
+---
+
+### 💊 Prescriptions
+
+- Create Prescription
+- View Prescriptions
+- Patient Prescription History
+
+---
+
+### 💰 Invoices
+
+- Create Invoice
+- View Invoice Details
+- Invoice Management
+
+---
+
+# 📡 API Modules
 
 ## 🔐 Authentication
 
-- User Registration
-- User Login
-- JWT Token Generation
-- Role Management
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | /api/Account/Register | Register new account |
+| POST | /api/Account/Login | User Login |
 
 ---
 
-## 👨‍⚕️ Doctor Module
+## 👨‍⚕️ Doctor APIs
 
-- Manage appointments
-- Add medical records
-- Create prescriptions
-- Manage working hours
-
----
-
-## 🧑 Patient Module
-
-- Book appointments
-- View appointments
-- Access prescriptions
-- View medical records
+- Doctor Profile
+- Working Time
+- Appointments
+- Medical Records
+- Prescriptions
 
 ---
 
-## 💳 Invoice Module
+## 🧑 Patient APIs
 
-- Generate invoices
-- View invoice details
-- Manage billing information
+- Patient Profile
+- Appointment Booking
+- Appointment History
+- Medical Records
+
+---
+
+## 👨‍💼 Admin APIs
+
+- Invoice Management
+- Administrative Operations
 
 ---
 
@@ -133,13 +183,10 @@ SmartCare
 │
 ├── SmartCare.PL
 │   ├── Areas
-│   │   ├── Admin
-│   │   ├── Doctor
 │   │   ├── Identity
-│   │   └── Patient
-│   │
-│   ├── Helpers
-│   └── Program.cs
+│   │   ├── Doctor
+│   │   ├── Patient
+│   │   └── Admin
 │
 ├── SmartCare.BLL
 │   ├── Services
@@ -151,30 +198,18 @@ SmartCare
 │   ├── Models
 │   ├── Repositories
 │   ├── Data
-│   └── Utilities
+│   └── Migrations
 ```
 
 ---
 
-# 🔑 Roles
+# 🛠️ Installation
 
-The system supports multiple user roles:
-
-- 👨‍💼 Admin
-- 👨‍⚕️ Doctor
-- 🧑 Patient
-
-Each role has its own permissions and protected endpoints.
-
----
-
-# 🛠️ Installation & Setup
-
-## Prerequisites
+## Requirements
 
 - .NET 8 SDK
 - SQL Server
-- Visual Studio 2022 (Recommended)
+- Visual Studio 2022
 
 ---
 
@@ -189,13 +224,13 @@ cd SmartCare
 
 ## Configure Database
 
-Update the connection string inside:
+Update your connection string inside:
 
-```
+```json
 appsettings.json
 ```
 
-Then apply migrations:
+Run migrations:
 
 ```bash
 dotnet ef database update
@@ -203,57 +238,68 @@ dotnet ef database update
 
 ---
 
-## Run the Project
+## Run
 
 ```bash
 dotnet run
 ```
 
-or simply run the project using Visual Studio.
+or simply press **F5** in Visual Studio.
+
+---
+
+# 🔑 User Roles
+
+### 👨‍💼 Admin
+
+- Manage invoices
+- Administrative operations
+
+### 👨‍⚕️ Doctor
+
+- Manage appointments
+- Create prescriptions
+- Update medical records
+- Manage working hours
+
+### 🧑 Patient
+
+- Book appointments
+- View prescriptions
+- Access medical records
 
 ---
 
 # 🔒 Authentication
 
-SmartCare uses:
+SmartCare secures all protected endpoints using:
 
 - ASP.NET Identity
-- JWT Authentication
+- JWT Bearer Authentication
 - Role-Based Authorization
 
-All protected endpoints require a valid JWT token.
-
 ---
 
-# 📚 API Documentation
-
-The project includes OpenAPI support for testing and exploring endpoints.
-
-After running the project, open the API documentation from your browser.
-
----
-
-# ✨ Future Improvements
+# 📈 Future Enhancements
 
 - Email Notifications
-- Online Payment Integration
+- SMS Appointment Reminders
+- Online Payments
+- Medical Report PDF Export
 - Video Consultation
-- Real-Time Chat
-- Mobile Application
-- Appointment Reminders
-- Medical Reports Export (PDF)
+- Dashboard Analytics
 
 ---
 
-# 👨‍💻 Author
+# 👨‍💻 Developer
 
 **Abd Al-Rahman Hamdan**
 
-Software Engineer | Backend Developer
+Software Engineer
 
 GitHub:
 https://github.com/abdfahmawe
 
 ---
 
-## ⭐ If you like this project, don't forget to give it a Star!
+⭐ If you found this project useful, consider giving it a star!
